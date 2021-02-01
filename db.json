@@ -1,0 +1,220 @@
+{
+    "menu" : 
+         {
+             
+                 
+                     "meal" : "Share Box",
+                     "price": 14.5,
+                     "description" : "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+         }
+             
+         
+    ,
+    "resturants":
+        [
+            {
+                "id": "Bon-Apetit",
+                "Location": "Cairo",
+                "hotLine": 19101,
+                "Branches": 20
+                
+            },
+            {
+                "id": "Buffalo-Burger",
+                "Location": "Cairo",
+                "hotLine": 19914,
+                "Branches": 20
+                
+            },
+            {
+                "id": "Burger-King",
+                "Location": "Cairo",
+                "hotLine": 16977,
+                "Branches": 20
+            },
+            {
+                "id": "Caracas",
+                "Location": "Cairo",
+                "hotLine": "N/A",
+                "Branches": 15
+            },
+            {
+                "id": "Crave",
+                "Location": "Cairo",
+                "hotLine": 16788,
+                "Branches": 20
+            },
+            {
+                "id": "Dunkin'",
+                "Location": "Cairo",
+                "hotLine": "N/A",
+                "Branches": 20
+            },
+            {
+                "id": "El-Abd",
+                "Location": "Cairo",
+                "hotLine": 16437,
+                "Branches": 20
+            },
+            {
+                "id": "El-Lido",
+                "Location": "Cairo",
+                "hotLine": "N/A",
+                "Branches": 20
+            },
+            {
+                "id": "ElDahan",
+                "Location": "Cairo",
+                "hotLine": 16194,
+                "Branches": 20
+            },
+            {
+                "id": "GAD",
+                "Location": "Cairo",
+                "hotLine": "N/A",
+                "Branches": 20
+            },
+            {
+                "id": "Hardee's",
+                "Location": "Cairo",
+                "hotLine": 19066,
+                "Branches": 40
+            },
+            {
+                "id": "Majesty",
+                "Location": "Cairo",
+                "hotLine": 19915,
+                "Branches": 15
+            },
+            {
+                "id": "Max-Burger",
+                "Location": "Cairo",
+                "hotLine": 19065,
+                "Branches": 15
+            },
+            {
+                "id": "Mcdonald's",
+                "Location": "Cairo",
+                "hotLine": 19991,
+                "Branches": 50
+            },
+            {
+                "id": "Mo'men",
+                "Location": "Cairo",
+                "hotLine": 16600,
+                "Branches": 20
+            },
+            {
+                "id": "Mori-Sushi",
+                "Location": "Cairo",
+                "hotLine": 16885,
+                "Branches": 30
+            },
+            {
+                "id": "O's-Pasta",
+                "Location": "Cairo",
+                "hotLine": "N/A",
+                "Branches": 2
+            },
+            {
+                "id": "Papa-John's",
+                "Location": "Cairo",
+                "hotLine": 19277,
+                "Branches": 30
+            },
+            {
+                "id": "Pastaweesy",
+                "Location": "Cairo",
+                "hotLine": 19034,
+                "Branches": 20
+            },
+            {
+                "id": "Paul",
+                "Location": "Cairo",
+                "hotLine": "N/A",
+                "Branches": 15
+            },
+            {
+                "id": "Peking",
+                "Location": "Cairo",
+                "hotLine": 16078,
+                "Branches": 15
+            },
+            {
+                "id": "Pizza-Hut",
+                "Location": "Cairo",
+                "hotLine": 19000,
+                "Branches": 30
+            },
+            {
+                "id": "Rosto",
+                "Location": "Cairo",
+                "hotLine": "N/A",
+                "Branches": 20
+            },
+            {
+                "id": "Sabai-Sabai",
+                "Location": "Cairo",
+                "hotLine": "N/A",
+                "Branches": 2
+            },
+            {
+                "id": "Tabali",
+                "Location": "Cairo",
+                "hotLine": 19061,
+                "Branches": 20
+            },
+            {
+                "id": "Zack's",
+                "Location": "Cairo",
+                "hotLine": 15198,
+                "Branches": 20
+            },
+            {
+                "id": "Zi-Sushi",
+                "Location": "Cairo",
+                "hotLine": "N/A",
+                "Branches": 20
+            }
+        ],
+
+        "users":[
+            {
+                "id": 1 ,
+                "name": "Mohamed",
+                "email": "mohamed@osama.com",
+                "password": "123456789"
+            },
+            {
+                "id": 2 ,
+                "name": "Ahmed",
+                "email": "ahmed@abdelsalam.com",
+                "password": "987654321"
+            },
+            {
+                "id": 3 ,
+                "name": "Salma",
+                "email": "Salma@salma.com",
+                "password": "itisohag2021"
+            }
+        ],
+
+        "admins":[
+            {
+                "id": 20211 ,
+                "name": "Mohamed",
+                "email": "mohamed@samir.com",
+                "password": "admin12021",
+                "auth": true
+            },
+            {
+                "id": 20212 ,
+                "name": "ahmed",
+                "email": "ahmed@magdy.com",
+                "password": "admin22021",
+                "auth": true
+            }
+
+        ]
+    
+}

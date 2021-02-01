@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+<<<<<<< HEAD
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { AccountSettingsComponent } from './Components/account-settings/account-settings.component';
 import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
@@ -22,6 +23,18 @@ const routes: Routes = [
   {path: 'My-Order', component: MyOrderComponent},
   {path: '**', component: NotFoundComponent},
 
+=======
+import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { OnlineDeliveryComponent } from './Components/online-delivery/online-delivery.component';
+import { ResturantProfileComponent } from './Components/resturant-profile/resturant-profile.component';
+import { UserProfileComponent } from './Components/user-profile/user-profile.component';
+
+const routes: Routes = [
+  { path: 'delivery', component: OnlineDeliveryComponent },
+  { path: 'resturants/:rid', component: ResturantProfileComponent },
+  { path: 'settings', component: UserProfileComponent },
+  { path: '**', component: NotFoundComponent }
+>>>>>>> 379287d373b8b16163406d040993171957c2ba80
 ];
 
 @NgModule({
