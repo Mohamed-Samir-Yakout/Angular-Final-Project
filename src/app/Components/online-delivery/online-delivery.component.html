@@ -1,0 +1,150 @@
+<div class="container-fluid">
+    <!-- <div id="offersCarusel" class="carousel slide container col-sm-12 " data-interval="false">
+        <div class="carousel-inner ">
+          <div class="carousel-item active row justify-content-md-center mt-3 ml-1" style="text-align: center;">
+                <div class="col-md-2 col-sm-5 col-12 offerImg" *ngFor='let i of OffersList'>
+                  <img src={{i.img}} alt="..." style="max-width: 100%;">
+                  <span style="display: block;">{{i.item}}</span>
+                  <small style="color: orangered;" *ngIf="i.offer">save now</small>
+                </div>
+           </div>
+           
+        </div>
+    </div> -->
+  <!--------------------Main Content----------------------->
+    
+    <section id="mainContent" class="container-fluid mt-2">
+        <div class="row">
+            <aside id="left" class="col-md-3">
+              <div class="col-md-12 justify-content-between border-bottom pb-2" [hidden]="!filter" id="filter">
+                <span class="col-md-12 col-lg-6 col-6" style="padding-left: 0;">Selected filters</span>
+                <span class="col-md-12 col-lg-6 col-6" id="clearFilter" onclick="clearAll()">clear All</span>
+              </div>
+              <div class="row border-bottom pb-2 pt-2 "  id="filterChecked">
+                <div [hidden]="!OrderOnline.checked" class="alert alert-light alert-dismissible fade show mb-0 pr-5" role="alert" id="onlineFilter">
+                  <small>order online</small> 
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="alert alert-light alert-dismissible fade show mb-0 pr-5 d-none" role="alert" id="openFilter" >
+                  <small>Open now</small> 
+                  <button  type="button" class="close" data-dismiss="alert"  aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+
+                <div class="alert alert-light alert-dismissible fade show mb-0 pr-5 d-none" role="alert" id="promoFilter">
+                  <small>Promo</small> 
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+
+                <div class="alert alert-light alert-dismissible fade show mb-0 pr-5 d-none" role="alert" id="hygieneFilter">
+                  <small>Hygiene Check</small> 
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                
+              </div>
+
+
+
+
+                <h4 class="col-sm-12" style="color: grey;">Show result for:</h4>
+                <div class="col-md-12 border-bottom mb-3 mt-3 pb-3">
+                    <div class="custom-control custom-switch ">
+                        <input #OrderOnline type="checkbox" class="custom-control-input" id="customSwitch1" value="Online Ordering" onclick="check1(this)" >
+                        <label class="custom-control-label" for="customSwitch1">Online ordering only<br>
+                           <small style="color: green;"><i class="fas fa-check-circle"></i> elmenus Order online</small></label>
+                      </div>
+                </div>
+
+                <div class="col-md-12 col-5  border-bottom mb-3 mt-1 pb-3 col-sm-6">
+                    <div class="form-check mb-2">
+                        <input  class="form-check-input" type="checkbox" value="Open now" id="openCheck" onclick="check1(this)">
+                        <label class="form-check-label" for="defaultCheck1">&nbsp;
+                            <small><i class="fas fa-door-open" style="color: grey;"></i></small>	&nbsp;
+                            <small  style="color: grey;">Open now</small>
+                        </label>
+                      </div>
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" value="Promo" id="promoCheck" onclick="check1(this)">
+                        <label class="form-check-label" for="defaultCheck2">
+                            &nbsp;
+                            <small><i class="fas fa-percentage" style="color: grey;"></i></small>	&nbsp;
+                            <small  style="color: grey;">Promo</small>
+                        </label>
+                      </div>
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" value="Hygine Check" id="hygieneCheck" onclick="check1(this)">
+                        <label class="form-check-label" for="defaultCheck3">
+                            &nbsp;
+                            <small><i class="fas fa-utensils" style="color: grey;"></i></small>	&nbsp;
+                            <small  style="color: grey;"> Hygiene Check</small>
+                        </label>
+                      </div>
+                </div>
+
+                <div class="col-md-12 border-bottom mb-3 mt-1 pb-4 col-5">
+                    <h6 style="color: grey;">Sort by:</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Popular" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Popular
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Rating">
+                        <label class="form-check-label" for="exampleRadios2">
+                         Rating
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="Delivery Time">
+                        <label class="form-check-label" for="exampleRadios3">
+                         Delivery Time
+                        </label>
+                      </div>
+                </div>
+
+
+            </aside>
+
+            <div class="col-md-9 mb-3" id="middle">
+
+              <div class="row mt-4"  id="TDContent">
+                <div class="col-md-12" id="TDTitle">
+                    <h4>Resturants:</h4>
+                </div>
+                <div class="row" id="TDItems" >
+                  <div class="col-md-4 col-5 items1" *ngFor="let item of restLit, let s = index" [hidden]="s > itemsCount" >
+                    <img src="../../../assets/Images/download2.jpg" alt="" style="max-width: 100%;">
+                    <div class="col-md-12">
+                        <small class="TDtxt1 mr-5">fast food</small>
+                        <small class="ml-4" style="color: green;"><i class="fas fa-check-circle"></i>Order online</small>
+                    </div>
+                    <div class="col-md-12">
+                        <a  [routerLink]="'/resturants/'+item.id"><span>{{item.id}}</span></a><br>
+                        <span class="fa fa-star checkedStar"></span>
+                        <span class="fa fa-star checkedStar"></span>
+                        <span class="fa fa-star checkedStar"></span>
+                        <span class="fa fa-star checkedStar"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+                </div>
+
+                <div [hidden]="!noMoreLoad" class="col-md-12">
+                  <button type="button" class="btn  col-md-12 mt-4 w-100" id="loadBtn" (click)="viewMore()">Load More Resturants</button>
+                 </div>
+              </div>
+
+            </div>
+</div>
