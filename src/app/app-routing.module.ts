@@ -26,7 +26,9 @@ const routes: Routes = [
   { path: 'delivery', component: OnlineDeliveryComponent },
   { path: 'resturants/:rid', component: ResturantProfileComponent },
   { path: 'settings', component: UserProfileComponent },
-  { path: '**', component: NotFoundComponent }
+  {path:"DineOut",loadChildren: () => import('./Components/dine-out/dine-out.module').then(m => m. DineOutModule )},
+  { path: '**', component: NotFoundComponent },
+ 
 ];
 
 @NgModule({
