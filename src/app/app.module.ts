@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
@@ -18,6 +19,8 @@ import { AccountSettingsComponent } from './Components/account-settings/account-
 import { MyOrderComponent } from './Components/my-order/my-order.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 =======
+=======
+>>>>>>> 9c9c4374d116056e45decf9b5b82244e93878fca
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OnlineDeliveryComponent } from './Components/online-delivery/online-delivery.component';
 import { ResturantProfileComponent } from './Components/resturant-profile/resturant-profile.component';
@@ -31,22 +34,10 @@ import { ChangePasswordComponent } from './Components/user-profile/change-passwo
 import { ChangeAddressComponent } from './Components/user-profile/change-address/change-address.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 
->>>>>>> 379287d373b8b16163406d040993171957c2ba80
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    HeaderComponent,
-    FooterComponent,
-    AboutUsComponent,
-    TermsComponent,
-    PrivacyComponent,
-    NotFoundComponent,
-    AdminDashboardComponent,
-    AccountSettingsComponent,
-    MyOrderComponent
-=======
     OnlineDeliveryComponent,
     ResturantProfileComponent,
     AboutComponent,
@@ -59,7 +50,6 @@ import { NotFoundComponent } from './Components/not-found/not-found.component';
     ChangeAddressComponent,
     NotFoundComponent
 
->>>>>>> 379287d373b8b16163406d040993171957c2ba80
   ],
   imports: [
     BrowserModule,
