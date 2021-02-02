@@ -20,7 +20,7 @@ export class UserService {
     return this.http.get<Iusers>(`${environment.base_URL}/users/${uid}`)
   }
 
-  changeEmail(uid: number, user: Iusers): Observable<any> {
+  updateUserData(uid: number, user: Iusers): Observable<any> {
     const HttpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -29,6 +29,6 @@ export class UserService {
       })
     };
 
-    return this.http.put<any>(`${environment.base_URL}/user/${uid}`, user, HttpOptions)
+    return this.http.put<any>(`${environment.base_URL}/users/${uid}`, user, HttpOptions)
   }
 }
