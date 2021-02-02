@@ -33,7 +33,6 @@ export class DiscoverByLocationComponent implements OnInit {
     this.router.navigate(['/DineOut/RestaurantLocation',location]);
     
 
-
   }
 
 }
