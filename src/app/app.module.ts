@@ -16,6 +16,7 @@ import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
 import { AccountSettingsComponent } from './Components/account-settings/account-settings.component';
 import { MyOrderComponent } from './Components/my-order/my-order.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 =======
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OnlineDeliveryComponent } from './Components/online-delivery/online-delivery.component';
