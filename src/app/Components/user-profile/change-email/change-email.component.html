@@ -3,11 +3,13 @@
           <h6>Chanege Email</h6>
     </div>
    <div class="row justify-content-center mt-5">
-         <div class="form-group row">
-             <label for="email" class="align-self-start">Email</label>
-             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-             <button type="button" class="btn mt-5" id="changebtn">Change email</button>
+      <form (ngSubmit)="changeEmail()" #changeEmailForm="ngForm">
+            <div class="form-group row">
+                <label for="email" class="align-self-start">Email</label>
+                <input type="email" [(ngModel)]="chnageemail.email" name="newEmail" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <button type="submit" class="btn mt-5" id="changebtn">Change email</button>
 
-         </div>
+             </div>
+      </form>
    </div>
 </div>
