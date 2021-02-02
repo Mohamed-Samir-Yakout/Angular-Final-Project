@@ -3,21 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { HeaderComponent } from './Components/header/header.component';
-import { FooterComponent } from './Components/footer/footer.component';
-import { AboutUsComponent } from './Components/about-us/about-us.component';
-import { TermsComponent } from './Components/terms/terms.component';
-import { PrivacyComponent } from './Components/privacy/privacy.component';
-import { NotFoundComponent } from './Components/not-found/not-found.component';
-import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
-import { AccountSettingsComponent } from './Components/account-settings/account-settings.component';
-import { MyOrderComponent } from './Components/my-order/my-order.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-=======
-=======
->>>>>>> 9c9c4374d116056e45decf9b5b82244e93878fca
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OnlineDeliveryComponent } from './Components/online-delivery/online-delivery.component';
 import { ResturantProfileComponent } from './Components/resturant-profile/resturant-profile.component';
