@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/Services/user.service';
+import { Iusers } from 'src/app/ViewModels/iusers';
 
 @Component({
   selector: 'app-user-profile',
@@ -9,7 +11,11 @@ export class UserProfileComponent implements OnInit {
   changePass: boolean = false
   changeEmail: boolean = true
   chandeAddress: boolean = false
-  constructor() { }
+
+
+  constructor(private userData: UserService) {
+
+  }
 
   ngOnInit(): void {
   }
