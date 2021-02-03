@@ -263,6 +263,42 @@
             "name":"Burgers"
         }     
     
-    ]
+    ],
+    "users": [
+        {
+          "id": 1,
+          "name": "Mohamed",
+          "password": "ab123456789",
+          "email": "mohamed@osama.com"
+        },
+        {
+          "id": 2,
+          "name": "Ahmed",
+          "email": "ahmed@abdelsalam.com",
+          "password": "987654321"
+        },
+        {
+          "id": 3,
+          "name": "Salma",
+          "email": "Salma@salma.com",
+          "password": "itisohag2021"
+        }
+      ],
+      "admins": [
+        {
+          "id": 20211,
+          "name": "Mohamed",
+          "email": "mohamed@samir.com",
+          "password": "admin12021",
+          "auth": true
+        },
+        {
+          "id": 20212,
+          "name": "ahmed",
+          "email": "ahmed@magdy.com",
+          "password": "admin22021",
+          "auth": true
+        }
+      ]
     
 }
