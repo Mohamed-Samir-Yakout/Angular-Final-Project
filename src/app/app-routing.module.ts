@@ -11,12 +11,9 @@ import { OnlineDeliveryComponent } from './Components/online-delivery/online-del
 import { ResturantProfileComponent } from './Components/resturant-profile/resturant-profile.component';
 
 import { UserProfileComponent } from './Components/user-profile/user-profile.component';
-<<<<<<< HEAD
-import { NotFoundComponent } from './Components/not-found/not-found.component';
-=======
 import { GiftComponent } from './Components/gift/gift.component';
 import { SendGiftComponent } from './Components/send-gift/send-gift.component';
->>>>>>> e3912b350cd4c13695c675dd679990d113ffe5f5
+import { NotFoundComponent } from './Components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'Admin', component: AdminDashboardComponent },
@@ -24,16 +21,16 @@ const routes: Routes = [
   { path: 'TermsAndConditions', component: TermsComponent },
   { path: 'About-Us', component: AboutUsComponent },
   { path: 'Home', component: AdminDashboardComponent },
-  { path: 'Gift-Meals', component: AdminDashboardComponent },
+  { path: 'Gift-Meals', component: GiftComponent },
   { path: 'My-Order', component: MyOrderComponent },
-  { path: 'Account-Settings', component: AccountSettingsComponent },
+  // { path: 'Account-Settings', component: AccountSettingsComponent },
   { path: 'delivery', component: OnlineDeliveryComponent },
   { path: 'resturants/:rid', component: ResturantProfileComponent },
   { path: 'settings', component: UserProfileComponent },
   { path: 'gift', component: GiftComponent },
   { path: 'sendGift', component: SendGiftComponent },
   { path: "DineOut", loadChildren: () => import('./Components/dine-out/dine-out.module').then(m => m.DineOutModule) },
-  { path: '', redirectTo: 'Home', pathMatch: 'full' },
+  { path: '', redirectTo: 'delivery', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 
 ];
