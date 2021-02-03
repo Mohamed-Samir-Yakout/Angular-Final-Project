@@ -7,7 +7,7 @@
     <div class="  row">
    
 
-        <div  *ngFor='let restaurant of restaurantsByLocation ' class="card col-lg-2" style="width:25rem; margin-left: 20px;margin-top: 30px;">
+        <div   (click)="navigateToRestaurant(restaurant)"  *ngFor='let restaurant of restaurantsByLocation ' class="card col-lg-2" style="width:25rem; margin-left: 20px;margin-top: 30px;">
             <img class="card-img-top" src="../../../../../../assets/Images/download2.jpg" alt="Card image cap">
             <div class="card-body" >
                
