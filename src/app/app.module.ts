@@ -15,6 +15,8 @@ import { ChangeEmailComponent } from './Components/user-profile/change-email/cha
 import { ChangePasswordComponent } from './Components/user-profile/change-password/change-password.component';
 import { ChangeAddressComponent } from './Components/user-profile/change-address/change-address.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { GiftComponent } from './Components/gift/gift.component';
+import { SendGiftComponent } from './Components/send-gift/send-gift.component';
 
 
 @NgModule({
@@ -30,7 +32,10 @@ import { NotFoundComponent } from './Components/not-found/not-found.component';
     ChangeEmailComponent,
     ChangePasswordComponent,
     ChangeAddressComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    GiftComponent,
+    SendGiftComponent
+
 
   ],
   imports: [
