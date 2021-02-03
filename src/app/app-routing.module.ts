@@ -11,6 +11,8 @@ import { OnlineDeliveryComponent } from './Components/online-delivery/online-del
 import { ResturantProfileComponent } from './Components/resturant-profile/resturant-profile.component';
 
 import { UserProfileComponent } from './Components/user-profile/user-profile.component';
+import { GiftComponent } from './Components/gift/gift.component';
+import { SendGiftComponent } from './Components/send-gift/send-gift.component';
 
 const routes: Routes = [
   { path: 'Admin', component: AdminDashboardComponent },
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'delivery', component: OnlineDeliveryComponent },
   { path: 'resturants/:rid', component: ResturantProfileComponent },
   { path: 'settings', component: UserProfileComponent },
+  { path: 'gift', component: GiftComponent },
+  { path: 'sendGift', component: SendGiftComponent },
   { path: "DineOut", loadChildren: () => import('./Components/dine-out/dine-out.module').then(m => m.DineOutModule) },
   { path: '**', component: NotFoundComponent },
 
