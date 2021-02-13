@@ -19,6 +19,7 @@ import { GiftComponent } from './Components/gift/gift.component';
 import { SendGiftComponent } from './Components/send-gift/send-gift.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { HomeComponent } from './Components/home/home.component';
 
 
 
@@ -39,7 +40,8 @@ import { FooterComponent } from './Components/footer/footer.component';
     GiftComponent,
     SendGiftComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
 
 
   ],
