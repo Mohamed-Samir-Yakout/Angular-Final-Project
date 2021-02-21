@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  base_URL: " http://localhost:3000"
+ arabic_Api_URL: " http://localhost:3000",
+  english_Api_URL: "http://localhost:4000"
 };
 
 /*

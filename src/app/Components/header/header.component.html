@@ -1,58 +1,98 @@
 <nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top">
   <a class="navbar-brand" routerLink="/Home" routerLinkActive="active">
-    <img src="../assets/Images/elmenus.jpg" alt="logo" style="widows: 100px; height: 40px;">
+    <img
+      src="../assets/Images/elmenus.jpg"
+      alt="logo"
+      style="widows: 100px; height: 40px"
+    />
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavbar"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link"  routerLink="/delivery"  routerLinkActive="active">DELIVERY</a>
+        <a class="nav-link" routerLink="/delivery" routerLinkActive="active"
+          >DELIVERY</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/DineOut" routerLinkActive="active">DINE OUT</a>
+        <a class="nav-link" routerLink="/DineOut" routerLinkActive="active"
+          >DINE OUT</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/Gift-Meals" routerLinkActive="active">GIFT MEALS</a>
+        <a class="nav-link" routerLink="/Gift-Meals" routerLinkActive="active"
+          >GIFT MEALS</a
+        >
       </li>
     </ul>
 
-    <div class=" col-md-4 col-sm-12 col-sm-push-8 section-text"></div>
+    <div class="col-md-4 col-sm-12 col-sm-push-8 section-text"></div>
 
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" >NOTIFICATIONS</a>
+        <a class="nav-link">NOTIFICATIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/My-Order" routerLinkActive="active">MY ORDERS</a>
+        <a class="nav-link" routerLink="/My-Order" routerLinkActive="active"
+          >MY ORDERS</a
+        >
       </li>
 
-
       <li class="nav-item dropdown">
-
-        <a class="nav-link dropdown-toggle" routerLink="/settings" routerLinkActive="active" id="navbardrop"
-          data-toggle="dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          routerLink="/settings"
+          routerLinkActive="active"
+          id="navbardrop"
+          data-toggle="dropdown"
+        >
           ACCOUNT
         </a>
-        <div class="dropdown-menu ">
-
-          <a class="dropdown-item " routerLink="/Home" routerLinkActive="active"
-            style="width: auto; height: 150px; text-align: center;">User Name</a>
+        <div class="dropdown-menu">
+          <a
+            class="dropdown-item"
+            routerLink="/Home"
+            routerLinkActive="active"
+            style="width: auto; height: 150px; text-align: center"
+            >User Name</a
+          >
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="/Account-Settings" routerLinkActive="active"
-            style="width: auto; height: 50px;">Account Setting</a>
+          <a
+            class="dropdown-item"
+            routerLink="/Account-Settings"
+            routerLinkActive="active"
+            style="width: auto; height: 50px"
+            >Account Setting</a
+          >
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="/Home" routerLinkActive="active"
-            style="width: auto; height: 50px;">Logout</a>
+          <a
+            class="dropdown-item"
+            routerLink="/Home"
+            routerLinkActive="active"
+            style="width: auto; height: 50px"
+            >Logout</a
+          >
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/delivery" routerLinkActive="active">LANGUAGE</a>
+        <a class="nav-link" routerLink="/delivery" routerLinkActive="active"
+          >LANGUAGE</a
+        >
       </li>
     </ul>
 
+    <select id="Language" (change)="changeLanguage($event.target.value)">
+      <option value="ar" [selected]= "language== 'ar' " >عربي</option>
+      <option value="en" [selected]= "language== 'en' " >English</option>
+    </select>
   </div>
 </nav>
 
@@ -82,6 +122,3 @@
 
 
 </nav> -->
-
-
-

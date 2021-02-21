@@ -1,33 +1,23 @@
 
-<h1 class="discovermood text-center">Discover restaurants to dine-out</h1>
+<h1  class="discovermood text-center">{{"DineOutModule.header" |translate}} </h1>
 
 <div class="section-header">
    
-    <h2 id="Mood">Discover by Moods</h2>
+<h2 id="Mood">{{"DineOutModule.DiscoverByCategory"|translate}}</h2>
 </div>
-<div class="section-body row">
-    <div class="col-sm-12 col-lg-5 sec1">
-
-        <div class="card"  (click) ='restaurantByMood("Cheap Eats")'>
-            <div class="card-img-caption"  >
-                <h2 class="card-text" style="color: #fff;">Cheap Eats</h2>
-               <img class="card-img-top " src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ba76ec62-a72d-47e1-b1f9-05788a3ae54d.jpg" alt="Card image">
-
-            </div>
-        </div>
-
-    </div>
-    <div class="col-lg sec1">
-        <div class="card"  (click) = 'restaurantByMood("Hidden Gems")'>
+<div class=" row">
+ 
+   
+        <div class="card col-lg  col-sm-12"  *ngFor='let resturantMood of moods'  (click) = 'restaurantByMood(resturantMood.mood)'>
             <div class="card-img-caption">
-                <h4 class="card-text" style="color: #fff;">Hidden Gems</h4>
-                <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b14c1e-2225-11e8-924e-0242ac110011.jpg" alt="Card image" style="height: 80%">
+                <h4 class="card-text" style="color: #fff;">{{resturantMood.mood}}</h4>
+                <img class="card-img-top"  src= {{resturantMood.moodImage}} alt="Card image" >
 
             </div>
         </div>
 
-    </div>
-    <div class="col-lg sec1">
+  
+    <!-- <div class="col-lg sec1">
 
         <div class="card"  (click) = 'restaurantByMood("Coffeeshops")'>
             <div class="card-img-caption">
@@ -48,7 +38,7 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
 
 </div>

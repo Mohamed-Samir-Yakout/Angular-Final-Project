@@ -1,0 +1,10 @@
+{
+    "DineOutModule":{
+        "header": "اكتشف المطاعم لتناول العشاء بالخارج",
+        "DiscoverByCategory":"إكتشف الخروجات",
+        "DiscoverByDishes":"إكتشف الأكلات",
+        "DiscoverByLocation":"اكتشف القاهرة",
+        "SeeAll":"رؤية الكل"
+
+    }
+}

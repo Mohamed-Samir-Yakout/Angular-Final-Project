@@ -11,16 +11,19 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
 })
 export class HiddenGemsComponent implements OnInit {
   hiddenGemsRestaurants:Iresturant[]=[];
+  lang:string;
 
   constructor( private router:Router,private hiddenGemsRestaurantsService:ResturantDataService) { }
 
   ngOnInit(): void {
+    this.lang=localStorage.getItem('language');
     this.hiddenGemsRestaurantsService.getHiddenGemsRestaurants().subscribe(
         (response)=>{
          this.hiddenGemsRestaurants=response;
-         console.log(this.hiddenGemsRestaurants)
-
-
+         console.log(response)
+        },
+        (error)=>{
+          console.log(error)
         }
 
 

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Idish } from '../ViewModels/idishe';
 import { Imenu } from '../ViewModels/imenu';
+import { Imood } from '../ViewModels/imood';
 import { Iresturant } from '../ViewModels/iresturant';
 
 @Injectable({
@@ -14,40 +15,66 @@ export class ResturantDataService {
   constructor(private http: HttpClient) { }
 
   getAllRest(): Observable<Iresturant[]> {
-    return this.http.get<Iresturant[]>(`${environment.base_URL}/resturants`)
+    if(localStorage.getItem("language")=='ar')
+    return this.http.get<Iresturant[]>(`${environment.arabic_Api_URL}/resturants`)
+    if(localStorage.getItem("language")=='en')
+    return this.http.get<Iresturant[]>(`${environment.english_Api_URL}/resturants`)
   }
 
   getRestById(rid: string): Observable<Iresturant> {
-    return this.http.get<Iresturant>(`${environment.base_URL}/resturants/${rid}`)
+    return this.http.get<Iresturant>(`${environment.arabic_Api_URL}/resturants/${rid}`)
   }
 
 
   getMenu(): Observable<Imenu> {
-    return this.http.get<Imenu>(`${environment.base_URL}/menu`)
+    if(localStorage.getItem("language")=='ar')
+    return this.http.get<Imenu>(`${environment.arabic_Api_URL}/menu`)
+    if(localStorage.getItem("language")=='en')
+    return this.http.get<Imenu>(`${environment.english_Api_URL}/menu`)
+
   }
   getHiddenGemsRestaurants(): Observable<Iresturant[]> {
-
-
-    return this.http.get<Iresturant[]>(`${environment.base_URL}/resturants?Mood=Hidden Gems`)
+    // if(localStorage.getItem("language")=='ar')
+    return this.http.get<Iresturant[]>(`${environment.arabic_Api_URL}/resturants?Mood=Hidden Gems`)
+    // if(localStorage.getItem("language")=='en')
+    // return this.http.get<Iresturant[]>(`${environment.english_Api_URL}/resturants?Mood=اماكن خفيه`)
   }
   getRestaurantsByMoods(Mood:string): Observable<Iresturant[]> {
-
-
-    return this.http.get<Iresturant[]>(`${environment.base_URL}/resturants?Mood=${Mood}`)
+    if(localStorage.getItem("language")=='ar')
+    return this.http.get<Iresturant[]>(`${environment.arabic_Api_URL}/resturants?Mood=${Mood}`)
+    if(localStorage.getItem("language")=='en')
+    return this.http.get<Iresturant[]>(`${environment.english_Api_URL}/resturants?Mood=${Mood}`)
 
   }
   getRestaurantByDishs(Dish:string):Observable<Iresturant[]>{
 
-
-    return this.http.get<Iresturant[]>(`${environment.base_URL}/resturants?Dish=${Dish}`)
+    if(localStorage.getItem("language")=='ar')
+    return this.http.get<Iresturant[]>(`${environment.arabic_Api_URL}/resturants?Dish=${Dish}`)
+    if(localStorage.getItem("language")=='en')
+    return this.http.get<Iresturant[]>(`${environment.english_Api_URL}/resturants?Dish=${Dish}`)
   }
   getDishesAvailable():Observable<Idish[]>{
-    return  this.http.get<Idish[]>(`${environment.base_URL}/Dishes`)
+    if(localStorage.getItem("language") =='ar')
+    return  this.http.get<Idish[]>(`${environment.arabic_Api_URL}/Dishes`)
+   if(localStorage.getItem("language") =='en')
+    return this.http.get<Idish[]>(`${environment.english_Api_URL}/Dishes`)
   }
 
   getRestaurantByLocation(location:string):Observable<Iresturant[]>{
 
-
-    return this.http.get<Iresturant[]>(`${environment.base_URL}/resturants?Location=${location}`)
+    if(localStorage.getItem("language") =='ar')   
+    return this.http.get<Iresturant[]>(`${environment.arabic_Api_URL}/resturants?Location=${location}`)
+    if(localStorage.getItem("language")=='en')
+    
+    return this.http.get<Iresturant[]>(`${environment.english_Api_URL}/resturants?Location=${location}`)
   }
+   getMoods(): Observable<Imood[]>{
+    if(localStorage.getItem("language") =='ar')
+     return this.http.get<Imood[]>(`${environment.arabic_Api_URL}/moods`)
+     if(localStorage.getItem("language") =='en')
+     return this.http.get<Imood[]>(`${environment.english_Api_URL}/moods`)
+
+   }
+   
+
 }

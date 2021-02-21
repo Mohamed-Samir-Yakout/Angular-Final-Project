@@ -1,0 +1,11 @@
+{
+    "DineOutModule":{
+        "header": "Discover restaurants to dine-out",
+        "DiscoverByCategory":"Discover by Moods",
+        "DiscoverByDishes":"Discover by Dishes",
+        "DiscoverByLocation":"Discover BY Cairo",
+        "SeeAll":"SeeAll"
+
+
+    }
+}
