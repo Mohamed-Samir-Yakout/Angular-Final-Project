@@ -18,7 +18,7 @@ export class DiscoverByMoodsComponent implements OnInit {
     this.avilableMoods.getMoods().subscribe(
      (response)=>{
       this.moods = response
-      console.log(this.moods)
+    
 
 
 

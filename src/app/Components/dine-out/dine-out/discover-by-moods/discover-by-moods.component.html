@@ -10,7 +10,7 @@
    
         <div class="card col-lg  col-sm-12"  *ngFor='let resturantMood of moods'  (click) = 'restaurantByMood(resturantMood.mood)'>
             <div class="card-img-caption">
-                <h4 class="card-text" style="color: #fff;">{{resturantMood.mood}}</h4>
+                <h4 class="card-text" style="color: #fff;">{{resturantMood.moodp}}</h4>
                 <img class="card-img-top"  src= {{resturantMood.moodImage}} alt="Card image" >
 
             </div>

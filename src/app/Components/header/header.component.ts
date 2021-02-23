@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.language =localStorage.getItem('language') || 'en';
-    console.log(localStorage.getItem('language'))
+  
   }
 
   changeLanguage(language:string): void {

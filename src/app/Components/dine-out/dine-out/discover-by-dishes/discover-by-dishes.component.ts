@@ -10,9 +10,7 @@ import { Idish } from 'src/app/ViewModels/idishe';
   styleUrls: ['./discover-by-dishes.component.css']
 })
 export class DiscoverByDishesComponent implements OnInit {
-  dishes:Idish[]=[]
-
-
+  dishes:Idish[]=[];
   constructor(private router: Router,private allDishes:ResturantDataService) { }
 
   ngOnInit(): void {

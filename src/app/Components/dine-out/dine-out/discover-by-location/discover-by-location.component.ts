@@ -32,7 +32,6 @@ export class DiscoverByLocationComponent implements OnInit {
    
     if(this.lang==='en')
     location="Cairo"   
-    console.log(location);
     this.router.navigate(['/DineOut/RestaurantLocation',location]);
     
 

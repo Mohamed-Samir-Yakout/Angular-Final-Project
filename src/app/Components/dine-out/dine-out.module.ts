@@ -10,6 +10,7 @@ import { SidebarComponent } from './dine-out-details/sidebar/sidebar.component';
 import { DiscoverByCategoryComponent } from './dine-out-details/discover-by-category/discover-by-category.component';
 import { DiscoverByDishesComponent } from './dine-out/discover-by-dishes/discover-by-dishes.component';
 import {TranslateModule} from '@ngx-translate/core';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 
@@ -23,7 +24,8 @@ const routes : Routes=[{path:'' ,component: DineOutComponent},
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    TranslateModule
+    TranslateModule,
+    NgImageSliderModule
   ]
 })
 export class DineOutModule { }
