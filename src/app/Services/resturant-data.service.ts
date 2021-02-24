@@ -22,7 +22,10 @@ export class ResturantDataService {
   }
 
   getRestById(rid: string): Observable<Iresturant> {
+    if(localStorage.getItem("language")=='ar')
     return this.http.get<Iresturant>(`${environment.arabic_Api_URL}/resturants/${rid}`)
+    if(localStorage.getItem("language")=='en')
+    return this.http.get<Iresturant>(`${environment.english_Api_URL}/resturants/${rid}`)
   }
 
 
