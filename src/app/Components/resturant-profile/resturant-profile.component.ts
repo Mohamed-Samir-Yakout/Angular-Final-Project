@@ -10,7 +10,6 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
 })
 export class ResturantProfileComponent implements OnInit {
   resturant: Iresturant = { id: '', Location: '', hotLine: 0, Branches: 0 ,Mood:""}
-
   aboutRest: boolean = false;
   restMenu: boolean = true;
   restBranches: boolean = false;

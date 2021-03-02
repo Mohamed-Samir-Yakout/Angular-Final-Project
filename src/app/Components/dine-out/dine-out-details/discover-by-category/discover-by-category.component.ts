@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ResturantDataService } from 'src/app/Services/resturant-data.service';
+import { SharedService } from 'src/app/Services/shared.service';
 import { Iresturant } from 'src/app/ViewModels/iresturant';
 @Component({
   selector: 'app-discover-by-category',
@@ -9,12 +10,19 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
 })
 export class DiscoverByCategoryComponent implements OnInit {
   restaurantList: Iresturant[] = [];
+  restaurant:any;
+  filterdList:Iresturant[];
 
   constructor(
     private activatedRouter: ActivatedRoute,
     private restaurants: ResturantDataService,
-    private router: Router
-  ) {}
+    private router: Router,
+    private sharedService: SharedService
+  ) {
+
+
+    this.restaurant=this.sharedService.getValueSearched();
+  }
 
   ngOnInit(): void {
     this.activatedRouter.paramMap.subscribe((params: ParamMap) => {
@@ -53,15 +61,27 @@ export class DiscoverByCategoryComponent implements OnInit {
         this.restaurants
           .getRestaurantByLocation(sortByRestaurantLocation)
           .subscribe(
-            (response) => {
-              this.restaurantList = response;
-              console.log(response);
+            (response) => {  
+        
+              if(this.restaurant.length>0){ 
+                this.restaurantList=response.filter((rest)=>{
+                  return (
+                    rest.id.toLowerCase().includes(this.restaurant)
+                    )
+                });
+
+              }
               
+              else{this.restaurantList=response}
+             
             },
             (err) => {
               console.log(err);
             }
+
+           
           );
+         
       }
     });
   }
