@@ -3,3 +3,11 @@
 
     color: white;
 }
+
+#clearFilter:hover{
+    cursor: pointer;
+}
+
+.checkedStar{
+    color: gold;
+}

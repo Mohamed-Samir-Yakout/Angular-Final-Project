@@ -44,37 +44,37 @@
     <section id="mainContent" class="container-fluid mt-2">
         <div class="row">
             <aside id="left" class="col-md-3">
-              <div class="col-md-12 justify-content-between border-bottom pb-2" [hidden]="!filter" id="filter">
+              <div class="col-md-12 justify-content-between border-bottom pb-2" *ngIf="openNow||orderOnline||hyginCheck||promoCheck" id="filter">
                 <span class="col-md-12 col-lg-6 col-6" style="padding-left: 0;">Selected filters</span>
-                <span class="col-md-12 col-lg-6 col-6" id="clearFilter" onclick="clearAll()">clear All</span>
+                <span class="col-md-12 col-lg-6 col-6" id="clearFilter" (click)="clearAll()">clear All</span>
               </div>
               <div class="row border-bottom pb-2 pt-2 "  id="filterChecked">
-                <div [hidden]="!OrderOnline.checked" class="alert alert-light alert-dismissible fade show mb-0 pr-5" role="alert" id="onlineFilter">
+                <div   *ngIf='orderOnline' class="alert alert-light alert-dismissible fade show mb-0 pr-5" role="alert" id="onlineFilter">
                   <small>order online</small> 
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <button type="button" (click)='orderOnline=!orderOnline' class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
 
-                <div class="alert alert-light alert-dismissible fade show mb-0 pr-5 d-none" role="alert" id="openFilter" >
+                <div  *ngIf='openNow' class="alert alert-light alert-dismissible fade show mb-0 pr-5" role="alert" id="openFilter" >
                   <small>Open now</small> 
-                  <button  type="button" class="close" data-dismiss="alert"  aria-label="Close">
+                  <button  type="button" class="close" data-dismiss="alert" (click)='openNow=!openNow' aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
 
 
-                <div class="alert alert-light alert-dismissible fade show mb-0 pr-5 d-none" role="alert" id="promoFilter">
+                <div *ngIf='promoCheck' class="alert alert-light alert-dismissible fade show mb-0 pr-5" role="alert" id="promoFilter">
                   <small>Promo</small> 
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <button type="button" class="close" (click)='promoCheck=!promoCheck' data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
 
 
-                <div class="alert alert-light alert-dismissible fade show mb-0 pr-5 d-none" role="alert" id="hygieneFilter">
+                <div *ngIf='hyginCheck' class="alert alert-light alert-dismissible fade show mb-0 pr-5" role="alert" id="hygieneFilter">
                   <small>Hygiene Check</small> 
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <button type="button" class="close" (click)='hyginCheck=!hyginCheck' data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -88,7 +88,7 @@
                 <h4 class="col-sm-12" style="color: grey;">Show result for:</h4>
                 <div class="col-md-12 border-bottom mb-3 mt-3 pb-3">
                     <div class="custom-control custom-switch ">
-                        <input #OrderOnline type="checkbox" class="custom-control-input" id="customSwitch1" value="Online Ordering" onclick="check1(this)" >
+                        <input #OrderOnline type="checkbox" (change)='orderOnline=!orderOnline' [checked]='orderOnline' class="custom-control-input" id="customSwitch1" value="Online Ordering">
                         <label class="custom-control-label" for="customSwitch1">Online ordering only<br>
                            <small style="color: green;"><i class="fas fa-check-circle"></i> elmenus Order online</small></label>
                       </div>
@@ -96,14 +96,14 @@
 
                 <div class="col-md-12 col-5  border-bottom mb-3 mt-1 pb-3 col-sm-6">
                     <div class="form-check mb-2">
-                        <input  class="form-check-input" type="checkbox" value="Open now" id="openCheck" onclick="check1(this)">
+                        <input  class="form-check-input" (change)='openNow=!openNow' [checked]='openNow'  type="checkbox" value="Open now" id="openCheck">
                         <label class="form-check-label" for="defaultCheck1">&nbsp;
                             <small><i class="fas fa-door-open" style="color: grey;"></i></small>	&nbsp;
                             <small  style="color: grey;">Open now</small>
                         </label>
                       </div>
                       <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="Promo" id="promoCheck" onclick="check1(this)">
+                        <input class="form-check-input" type="checkbox" (change)='promoCheck=!promoCheck' [checked]='promoCheck' value="Promo" id="promoCheck">
                         <label class="form-check-label" for="defaultCheck2">
                             &nbsp;
                             <small><i class="fas fa-percentage" style="color: grey;"></i></small>	&nbsp;
@@ -111,7 +111,7 @@
                         </label>
                       </div>
                       <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="Hygine Check" id="hygieneCheck" onclick="check1(this)">
+                        <input class="form-check-input" type="checkbox" (change)='hyginCheck=!hyginCheck' [checked]='hyginCheck' value="Hygine Check" id="hygieneCheck">
                         <label class="form-check-label" for="defaultCheck3">
                             &nbsp;
                             <small><i class="fas fa-utensils" style="color: grey;"></i></small>	&nbsp;

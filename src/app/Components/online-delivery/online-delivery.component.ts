@@ -14,16 +14,19 @@ import { Itasty } from 'src/app/ViewModels/itasty';
 export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy {
 
   OffersList: Itasty[] = []
-  filter: boolean;
   restLit: Iresturant[];
   subscription: Subscription;
   subsList: Subscription[];
   itemsCount: number = 17;
   noMoreLoad: boolean = true;
+  openNow: boolean = false;
+  orderOnline: boolean = false;
+  hyginCheck: boolean = false;
+  promoCheck: boolean = false;
 
 
   constructor(private offers: TastyOffersService, private resDatea: ResturantDataService, private myRouter: Router) {
-    this.filter = true;
+
   }
 
 
@@ -48,6 +51,13 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy {
       return this.itemsCount += 6
     }
     return this.noMoreLoad = false
+  }
+
+  clearAll() {
+    this.hyginCheck = false;
+    this.openNow = false;
+    this.orderOnline = false;
+    this.promoCheck = false;
   }
 
   restProfile(rid: string) {
