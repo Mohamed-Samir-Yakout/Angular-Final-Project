@@ -17,6 +17,9 @@ import { ChangeAddressComponent } from './Components/user-profile/change-address
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { GiftComponent } from './Components/gift/gift.component';
 import { SendGiftComponent } from './Components/send-gift/send-gift.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { FooterComponent } from './Components/footer/footer.component';
+
 
 
 @NgModule({
@@ -34,7 +37,9 @@ import { SendGiftComponent } from './Components/send-gift/send-gift.component';
     ChangeAddressComponent,
     NotFoundComponent,
     GiftComponent,
-    SendGiftComponent
+    SendGiftComponent,
+    HeaderComponent,
+    FooterComponent
 
 
   ],

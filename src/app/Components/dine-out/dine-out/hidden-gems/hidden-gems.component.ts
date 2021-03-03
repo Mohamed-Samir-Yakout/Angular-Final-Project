@@ -37,5 +37,9 @@ export class HiddenGemsComponent implements OnInit {
 
 
   }
+  navigateToRestaurant(restaurant:Iresturant){
+
+    this.router.navigate(['/resturants',restaurant.id])
+  }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ResturantDataService } from 'src/app/Services/resturant-data.service';
 import { Iresturant } from 'src/app/ViewModels/iresturant';
 @Component({
@@ -11,7 +11,7 @@ export class DiscoverByCategoryComponent implements OnInit {
 
   restaurantList:Iresturant[]=[]
 
-  constructor(private activatedRouter: ActivatedRoute,private restaurants:ResturantDataService) { }
+  constructor(private activatedRouter: ActivatedRoute,private restaurants:ResturantDataService,private router:Router) { }
  
   ngOnInit(): void {
     this.activatedRouter.paramMap.subscribe((params: ParamMap)=>{
@@ -79,6 +79,10 @@ export class DiscoverByCategoryComponent implements OnInit {
 
 
 
+  }
+  navigateToRestaurant(restaurant:Iresturant){
+
+    this.router.navigate(['/resturants',restaurant.id])
   }
 
 }
