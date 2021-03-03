@@ -9,6 +9,8 @@ import { DineOutDetailsComponent } from './dine-out-details/dine-out-details.com
 import { SidebarComponent } from './dine-out-details/sidebar/sidebar.component';
 import { DiscoverByCategoryComponent } from './dine-out-details/discover-by-category/discover-by-category.component';
 import { DiscoverByDishesComponent } from './dine-out/discover-by-dishes/discover-by-dishes.component';
+import {TranslateModule} from '@ngx-translate/core';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 
@@ -21,7 +23,9 @@ const routes : Routes=[{path:'' ,component: DineOutComponent},
   declarations: [DiscoverByMoodsComponent,DineOutComponent, DiscoverByLocationComponent, HiddenGemsComponent, DineOutDetailsComponent, SidebarComponent,DiscoverByCategoryComponent, DiscoverByDishesComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    TranslateModule,
+    NgImageSliderModule
   ]
 })
 export class DineOutModule { }

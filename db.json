@@ -9,7 +9,36 @@
          }
              
          
-    ,
+    ,   
+    "moods" : [
+    {
+    "mood":"Cheap Eats",
+    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ba76ec62-a72d-47e1-b1f9-05788a3ae54d.jpg"
+    },
+    {
+    "mood":"Hidden Gems",
+    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b14c1e-2225-11e8-924e-0242ac110011.jpg"
+    },
+    {
+    "mood":"Coffeeshops",
+    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b14b83-2225-11e8-924e-0242ac110011.jpg"
+
+    },
+    {
+    "mood":"Kids-Friendly",
+    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b152a1-2225-11e8-924e-0242ac110011.jpg"
+
+    }
+
+
+
+
+
+],
+
+
+
+
     "resturants":
         [
             {

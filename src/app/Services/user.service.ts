@@ -12,12 +12,12 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getAllUsers(): Observable<Iusers[]> {
-    return this.http.get<Iusers[]>(`${environment.base_URL}/users`)
+    return this.http.get<Iusers[]>(`${environment.english_Api_URL}/users`)
   }
 
 
   getUserById(uid: number): Observable<Iusers> {
-    return this.http.get<Iusers>(`${environment.base_URL}/users/${uid}`)
+    return this.http.get<Iusers>(`${environment.english_Api_URL}/users/${uid}`)
   }
 
   updateUserData(uid: number, user: Iusers): Observable<any> {
@@ -29,6 +29,6 @@ export class UserService {
       })
     };
 
-    return this.http.put<any>(`${environment.base_URL}/users/${uid}`, user, HttpOptions)
+    return this.http.put<any>(`${environment.english_Api_URL}/users/${uid}`, user, HttpOptions)
   }
 }

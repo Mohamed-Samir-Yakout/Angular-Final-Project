@@ -9,14 +9,16 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
 })
 export class DiscoverByLocationComponent implements OnInit {
   restaurantsByLocation:Iresturant[]=[];
+  lang:string;
   constructor(private router:Router,private allRestaurantFromApi: ResturantDataService) { }
 
   ngOnInit(): void {
+    this.lang=localStorage.getItem('language');
     this.allRestaurantFromApi.getAllRest().subscribe(
       (response) => {
 
          this.restaurantsByLocation=response.slice(0,5);
-         console.log(this.restaurantsByLocation)
+       
        
       },
 
@@ -25,11 +27,11 @@ export class DiscoverByLocationComponent implements OnInit {
 
     )
 
-  
-
-
   }
   getRestaurantsByLocation (location:string){
+   
+    if(this.lang==='en')
+    location="Cairo"   
     this.router.navigate(['/DineOut/RestaurantLocation',location]);
     
 
