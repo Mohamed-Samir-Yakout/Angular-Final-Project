@@ -42,7 +42,8 @@
                 "hotLine": 19101,
                 "Branches": 20,
 				"Dish": "مشاوي",
-				"Mood":"اماكن خفيه"
+				"Mood":"اماكن خفيه",
+                "openNow" : true
                 
             },
             {
@@ -51,7 +52,8 @@
                 "hotLine": 19914,
                 "Branches": 20,
 				"Dish": "برجر",
-				"Mood":"صديقة للأطفال"
+				"Mood":"صديقة للأطفال",
+                "openNow" : true
             },
             {
                 "id": "برغر كينغ",
@@ -59,7 +61,8 @@
                 "hotLine": 16977,
                 "Branches": 20,
 				"Dish": "برجر",
-				"Mood":"صديقة للأطفال"
+				"Mood":"صديقة للأطفال",
+                "openNow" : true
             },
             {
                 "id": "كاراكاس",
@@ -67,7 +70,8 @@
                 "hotLine": "N/A",
                 "Branches": 15,
 				"Dish": "معكرونة",
-				"Mood":"المقاهي"
+				"Mood":"المقاهي",
+                "openNow" : true
             },
             {
                 "id": "كراف",
@@ -75,7 +79,8 @@
                 "hotLine": 16788,
                 "Branches": 20,
 				"Dish": "معكرونة",
-				"Mood":"المقاهي"
+				"Mood":"المقاهي",
+                "openNow" : true
             },
             {
                 "id": "دانكن",
@@ -83,7 +88,8 @@
                 "hotLine": "N/A",
                 "Branches": 20,
 				"Dish": "دونات",
-				"Mood":"المقاهي"
+				"Mood":"المقاهي",
+                "openNow" : true
             },
             {
                 "id": "العبد",
@@ -91,7 +97,8 @@
                 "hotLine": 16437,
                 "Branches": 20,
 				"Dish": "حلويات",
-				"Mood":"المقاهي"
+				"Mood":"المقاهي",
+                "openNow" : true
             },
             {
                 "id": "الليدو",

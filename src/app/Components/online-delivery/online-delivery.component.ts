@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ResturantDataService } from 'src/app/Services/resturant-data.service';
@@ -11,10 +11,11 @@ import { Itasty } from 'src/app/ViewModels/itasty';
   templateUrl: './online-delivery.component.html',
   styleUrls: ['./online-delivery.component.css']
 })
-export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy {
+export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, DoCheck {
 
   OffersList: Itasty[] = []
   restLit: Iresturant[];
+  filteredRestList: Iresturant[];
   subscription: Subscription;
   subsList: Subscription[];
   itemsCount: number = 17;
@@ -28,6 +29,7 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy {
   constructor(private offers: TastyOffersService, private resDatea: ResturantDataService, private myRouter: Router) {
 
   }
+
 
 
   ngOnInit(): void {
@@ -44,6 +46,23 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy {
 
     //this.subsList.push(this.subscription)
 
+  }
+
+  ngDoCheck() {
+    console.log(this.openNow)
+    if (this.openNow) {
+      this.filteredRestList = this.restLit.filter((rest) => {
+        return rest.openNow === true
+      })
+      if (this.itemsCount > this.filteredRestList.length) {
+        this.noMoreLoad = false
+      }
+    } else {
+      this.filteredRestList = this.restLit
+      this.noMoreLoad = true
+    }
+
+    console.log(this.filteredRestList)
   }
 
   viewMore(): number | boolean {
@@ -68,6 +87,8 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy {
       }
     )
   }
+
+
 
   ngOnChanges() {
 

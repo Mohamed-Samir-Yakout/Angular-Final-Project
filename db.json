@@ -47,7 +47,8 @@
                 "hotLine": 19101,
                 "Branches": 20,
 				"Dish": "Grills",
-				"Mood":"Hidden Gems"
+				"Mood":"Hidden Gems",
+                "openNow" : true
             },
             {
                 "id": "Buffalo-Burger",
@@ -55,7 +56,8 @@
                 "hotLine": 19914,
                 "Branches": 20,
 				"Dish": "Burgers",
-				"Mood":"Kids-Friendly"
+				"Mood":"Kids-Friendly",
+                "openNow" : true
             },
             {
                 "id": "Burger-King",
@@ -63,7 +65,8 @@
                 "hotLine": 16977,
                 "Branches": 20,
 				"Dish": "Burgers",
-				"Mood":"Kids-Friendly"
+				"Mood":"Kids-Friendly",
+                "openNow" : true
             },
             {
                 "id": "Caracas",
@@ -71,7 +74,8 @@
                 "hotLine": "N/A",
                 "Branches": 15,
 				"Dish": "Pasta",
-				"Mood":"Coffeeshops"
+				"Mood":"Coffeeshops",
+                "openNow" : true
             },
             {
                 "id": "Crave",
@@ -79,7 +83,8 @@
                 "hotLine": 16788,
                 "Branches": 20,
 				"Dish": "Pasta",
-				"Mood":"Coffeeshops"
+				"Mood":"Coffeeshops",
+                "openNow" : true
             },
             {
                 "id": "Dunkin'",
@@ -87,7 +92,8 @@
                 "hotLine": "N/A",
                 "Branches": 20,
 				"Dish": "Donauts",
-				"Mood":"Coffeeshops"
+				"Mood":"Coffeeshops",
+                "openNow" : true
             },
             {
                 "id": "El-Abd",
@@ -95,7 +101,8 @@
                 "hotLine": 16437,
                 "Branches": 20,
 				"Dish": "Desserts",
-				"Mood":"Coffeeshops"
+				"Mood":"Coffeeshops",
+                "openNow" : true
             },
             {
                 "id": "El-Lido",

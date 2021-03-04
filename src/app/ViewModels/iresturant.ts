@@ -3,7 +3,8 @@ export interface Iresturant {
     Location: string,
     hotLine: number,
     Branches: number,
-    Dish?:string,
-    Mood?:string
+    Dish?: string,
+    Mood?: string,
+    openNow?: boolean
 
 }
