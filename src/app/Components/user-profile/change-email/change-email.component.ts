@@ -1,6 +1,7 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { UserService } from 'src/app/Services/user.service';
-import { Iusers } from 'src/app/ViewModels/iusers';
+import { User } from 'src/app/ViewModels/iusers';
+
 
 @Component({
   selector: 'app-change-email',
@@ -9,7 +10,7 @@ import { Iusers } from 'src/app/ViewModels/iusers';
 })
 export class ChangeEmailComponent implements OnInit, OnChanges {
 
-  chnageemail: Iusers;
+  chnageemail:  User;
   constructor(private user: UserService) {
     this.chnageemail = { id: 1, name: "Mohamed", password: "123456789", email: "" }
   }

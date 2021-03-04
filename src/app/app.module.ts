@@ -23,6 +23,7 @@ import { HomeComponent } from './Components/home/home.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { SearchPipe } from './Pipes/search-pipe.pipe';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'./assets/i18n/','.json');
@@ -49,7 +50,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    SearchPipe
+    SearchPipe,
+    LoadingSpinnerComponent
 
 
   ],
