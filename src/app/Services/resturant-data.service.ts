@@ -65,8 +65,10 @@ export class ResturantDataService {
 
   getRestaurantByLocation(location:string):Observable<Iresturant[]>{
 
-    if(localStorage.getItem("language") =='ar')   
+    if(localStorage.getItem("language") =='ar')   {
+      console.log(location)
     return this.http.get<Iresturant[]>(`${environment.arabic_Api_URL}/resturants?Location=${location}`)
+    }
     if(localStorage.getItem("language")=='en')
     
     return this.http.get<Iresturant[]>(`${environment.english_Api_URL}/resturants?Location=${location}`)

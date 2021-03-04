@@ -1,6 +1,7 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { UserService } from 'src/app/Services/user.service';
-import { Iusers } from 'src/app/ViewModels/iusers';
+import { User } from 'src/app/ViewModels/iusers';
+
 
 @Component({
   selector: 'app-change-password',
@@ -8,10 +9,10 @@ import { Iusers } from 'src/app/ViewModels/iusers';
   styleUrls: ['./change-password.component.css']
 })
 export class ChangePasswordComponent implements OnInit, OnChanges {
-  changePass: Iusers
+  changePass:  User
   confirmNewPass: string;
   oldPass: string
-  currentUserData: Iusers = { id: 0, name: "", password: "", email: "" }
+  currentUserData:  User = { id: 0, name: "", password: "", email: "" }
   constructor(private user: UserService) {
 
     this.changePass = { id: 1, name: "Mohamed", password: "", email: "mohamed@osama.com" }

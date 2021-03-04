@@ -11,7 +11,7 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
 export class DiscoverByCategoryComponent implements OnInit {
   restaurantList: Iresturant[] = [];
   restaurant:any;
-  filterdList:Iresturant[];
+  
 
   constructor(
     private activatedRouter: ActivatedRoute,
@@ -35,6 +35,8 @@ export class DiscoverByCategoryComponent implements OnInit {
       let sortByRestaurantLocation = this.activatedRouter.snapshot.paramMap.get(
         'Location'
       );
+
+      
       if (sortByRestaurantMood) {
         this.restaurants.getRestaurantsByMoods(sortByRestaurantMood).subscribe(
           (response) => {
@@ -58,11 +60,12 @@ export class DiscoverByCategoryComponent implements OnInit {
         );
       }
       if (sortByRestaurantLocation) {   
+        console.log(sortByRestaurantLocation)
         this.restaurants
           .getRestaurantByLocation(sortByRestaurantLocation)
           .subscribe(
             (response) => {  
-        
+              console.log(response)
               if(this.restaurant.length>0){ 
                 this.restaurantList=response.filter((rest)=>{
                   return (
