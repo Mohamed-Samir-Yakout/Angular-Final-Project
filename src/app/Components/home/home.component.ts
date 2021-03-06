@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -7,26 +7,33 @@ import { ResturantDataService } from 'src/app/Services/resturant-data.service';
 import { SharedService } from 'src/app/Services/shared.service';
 import { Iresturant } from 'src/app/ViewModels/iresturant';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,OnDestroy {
   restaurantName: string;
   restaurantsList:Iresturant[];
   restaurantNameList:String[]=[]
   subscription: Subscription;
   isLoading:boolean=false;
   error:String=null;
+  isAuthnticated:string=localStorage.getItem('authUser');
+  userEmail:string='';
+  
 
   constructor(private mySharedService:SharedService,private router:Router,private resDatea: ResturantDataService,private authService :AuthnticationService) {
    
+console.log(this.isAuthnticated)
 
   }
+  ngOnDestroy(): void {
+  
+  }
 
-  ngOnInit(): void {
-   
+  ngOnInit(): void { 
     this.restaurantName='';
     this.subscription = this.resDatea.getAllRest().subscribe(
       (res) => {
@@ -42,14 +49,11 @@ export class HomeComponent implements OnInit {
 
 
          console.log(err);
-        
-        
+           
         }
 
     )
      
-   
-   
   }
   navigateToRestaurantMatchesSearch():void{
    
@@ -66,13 +70,14 @@ onSubmit(form:NgForm){
   const email=form.value.email;
   const  password=form.value.pwd;
   this.isLoading=true;
-  
   this.authService.signUp(email,password).subscribe(
     
     resData=>{
-      console.log(resData)
+      console.log(resData.email)
       this.isLoading=false;
       this.error=null;
+      localStorage.setItem('authUser',resData.idToken);
+      window.location.reload();
     
     },
     err=>{console.log(err)
@@ -89,16 +94,15 @@ onSubmit(form:NgForm){
 
 
 onClickLogin(userlogin:NgForm){
-  console.log(userlogin.value);
   const email=userlogin.value.email;
   const  password=userlogin.value.pwd;
   this.isLoading=true;
-
   this.authService.login(email,password).subscribe(resData=>{
-    console.log(resData)
     this.isLoading=false;
     this.error=null;
-  
+     this.userEmail=resData.email;
+    localStorage.setItem('authUser',resData.idToken);
+    window.location.reload();
   },
   err=>{console.log(err)
     this.isLoading=false;
@@ -106,6 +110,11 @@ onClickLogin(userlogin:NgForm){
   
   })
   userlogin.reset();
+  // 
 
+}
+logOutForEmail(){
+  this.authService.logout();
+  window.location.reload();
 }
 }

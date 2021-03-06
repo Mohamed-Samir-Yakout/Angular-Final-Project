@@ -13,6 +13,7 @@ import { GiftComponent } from './Components/gift/gift.component';
 import { SendGiftComponent } from './Components/send-gift/send-gift.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { HomeComponent } from './Components/home/home.component';
+import { AuthGuardGuard } from './Services/auth-guard.guard';
 
 const routes: Routes = [
   { path: 'Admin', component: AdminDashboardComponent },
@@ -24,7 +25,7 @@ const routes: Routes = [
   { path: 'My-Order', component: MyOrderComponent },
   { path: 'Account-Settings', component: AccountSettingsComponent },
   { path: 'delivery', component: OnlineDeliveryComponent },
-  { path: 'resturants/:rid', component: ResturantProfileComponent },
+  { path: 'resturants/:rid', component: ResturantProfileComponent,canActivate:[AuthGuardGuard] },
   { path: 'settings', component: UserProfileComponent },
   { path: 'gift', component: GiftComponent },
   { path: 'sendGift', component: SendGiftComponent },

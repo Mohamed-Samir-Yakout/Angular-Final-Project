@@ -66,7 +66,7 @@
 
                 <div *ngIf='promoCheck' class="alert alert-light alert-dismissible fade show mb-0 pr-5" role="alert" id="promoFilter">
                   <small>Promo</small> 
-                  <button type="button" class="close" (click)='promoCheck=!promoCheck' data-dismiss="alert" aria-label="Close">
+                  <button type="button" class="close"  (click)='promoCheck=!promoCheck' data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -152,13 +152,13 @@
                     <h4>Resturants:</h4>
                 </div>
                 <div class="row" id="TDItems" >
-                  <div class="col-md-4 col-5 items1" *ngFor="let item of filteredRestList, let s = index" [hidden]="s > itemsCount" >
+                  <div  class="col-md-4 col-5 items1"  *ngFor="let item of filteredRestList, let s = index" [hidden]="s > itemsCount" >
                     <img src="../../../assets/Images/download2.jpg" alt="" style="max-width: 100%;">
                     <div class="col-md-12">
                         <small class="TDtxt1 mr-5">fast food</small>
                         <small class="ml-4" style="color: green;"><i class="fas fa-check-circle"></i>Order online</small>
                     </div>
-                    <div class="col-md-12">
+                    <div  class="col-md-12">
                         <a  [routerLink]="'/resturants/'+item.id"><span>{{item.id}}</span></a><br>
                         <span class="fa fa-star checkedStar"></span>
                         <span class="fa fa-star checkedStar"></span>

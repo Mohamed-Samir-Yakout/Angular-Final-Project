@@ -9,42 +9,48 @@ import { User } from 'src/app/ViewModels/iusers';
   styleUrls: ['./change-password.component.css']
 })
 export class ChangePasswordComponent implements OnInit, OnChanges {
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   changePass:  User
   confirmNewPass: string;
   oldPass: string
-  currentUserData:  User = { id: 0, name: "", password: "", email: "" }
-  constructor(private user: UserService) {
+  // currentUserData:  User = { id: '', email: "" }
+  // constructor(private user: UserService) {
 
-    this.changePass = { id: 1, name: "Mohamed", password: "", email: "mohamed@osama.com" }
-  }
-  ngOnChanges(changes: SimpleChanges): void {
+  //   this.changePass = { id: '',  email: "mohamed@osama.com" }
+  // }
+  // ngOnChanges(changes: SimpleChanges): void {
 
-  }
+  // }
 
 
-  ngOnInit(): void {
-    this.user.getUserById(this.changePass.id).subscribe(
-      (res) => {
-        this.currentUserData = res
-      },
-      (err) => { console.log(err) }
-    )
-  }
+  // ngOnInit(): void {
+  //   this.user.getUserById(this.changePass.id).subscribe(
+  //     (res) => {
+  //       this.currentUserData = res
+  //     },
+  //     (err) => { console.log(err) }
+  //   )
+  // }
 
-  changePassword() {
+  // changePassword() {
 
-    if (this.oldPass == this.currentUserData.password && this.changePass.password == this.confirmNewPass) {
+  //   if (this.oldPass == this.currentUserData.password && this.changePass.password == this.confirmNewPass) {
 
-      this.user.updateUserData(this.currentUserData.id, this.changePass).subscribe(
-        (res) => {
-          console.log(res)
-        },
-        (err) => { console.log(err) }
-      )
-    } else {
-      alert('something went wrong')
-    }
-    this.oldPass = "", this.confirmNewPass = "", this.changePass.password = ""
-  }
+  //     this.user.updateUserData(this.currentUserData.id, this.changePass).subscribe(
+  //       (res) => {
+  //         console.log(res)
+  //       },
+  //       (err) => { console.log(err) }
+  //     )
+  //   } else {
+  //     alert('something went wrong')
+  //   }
+  //   this.oldPass = "", this.confirmNewPass = "", this.changePass.password = ""
+  // }
 
 }

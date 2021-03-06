@@ -5,8 +5,9 @@
   <div class="row align-items-center">
     <div class="col-md-8 col-sm-12 col-sm-push-8 section-text"></div>
     <!--  Login modal-->
-    <div class="col-md-1 col-sm-12 col-sm-push-8 section-text">
-      <button
+    <div class="col-md-1 col-sm-12 col-sm-push-8 section-text"  id='loginModal'  >
+      <button 
+      *ngIf='!isAuthnticated'
         type="button"
         class="btn"
         data-toggle="modal"
@@ -21,7 +22,7 @@
         LOGIN
       </button>
 
-      <div class="modal fade" id="myModal" role="dialog">
+      <div     class="modal fade" id="myModal" role="dialog"  >
         <div class="modal-dialog modal-md" style="text-align: center">
           <div class="modal-content">
             <img
@@ -71,6 +72,8 @@
                   margin-bottom: 20px;
                 "
               [disabled]="!userlogin.valid"
+                  
+              
               />
               <!-- <input
                 class="btn"
@@ -98,6 +101,7 @@
                 type="button"
                 class="btn btn-default"
                 data-dismiss="modal"
+
               >
                 Close
               </button>
@@ -107,8 +111,9 @@
       </div>
     </div>
     <!--  Signup modal -->
-    <div class="col-md-1 col-sm-12 col-sm-push-8 section-text">
+    <div class="col-md-1 col-sm-12 col-sm-push-8 section-text"  id='signUpModal'   >
       <button
+      *ngIf='!isAuthnticated'
         type="button"
         class="btn"
         data-toggle="modal"
@@ -134,7 +139,7 @@
             <div class="alert alert-danger"  *ngIf='error'>
               <p>{{error}}</p>
             </div>
-            <div *ngIf="isLoading" style="text-align: center">
+            <div  *ngIf="isLoading" style="text-align: center">
               <app-loading-spinner></app-loading-spinner>
             </div>
             <form
@@ -198,12 +203,16 @@
         </div>
       </div>
     </div>
-    <div
-      class="col-md-1 col-sm-12 col-sm-push-8 section-text"
-      style="font-size: 20px; font-weight: bold; margin-top: 30px"
-    >
-      <a href="About Us.html" style="color: white">العربية</a>
-    </div>
+    <div  *ngIf='userEmail'>{{userEmail}}</div>
+    <div  (click)="logOutForEmail()"  *ngIf='isAuthnticated'  style="
+    color: white;
+    
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+  ">LOGOUT</div>
+  
+    
     <div class="col-md-1 col-sm-12 col-sm-push-8 section-text"></div>
   </div>
   <br />
@@ -261,12 +270,12 @@
         >{{ "Home.searchBtn" | translate }}</a
       >
     </div>
-    <br />
-    <!-- <ul  *ngIf="restaurantName.length>0" class="list-group list-group-flush" style="width: 40%; border-style: solid; ">
+    <br/>
+    <ul  *ngIf="restaurantName.length>0" class="list-group list-group-flush" style="width: 40%; border-style: solid; ">
        <li  (click)="goToRestaurant(restaurant)"  class="list-group-item"  *ngFor="let restaurant  of restaurantNameList | appFilter: restaurantName"  >
           {{restaurant}}
         </li>
-      </ul>  -->
+      </ul> 
   </div>
 
   <br />

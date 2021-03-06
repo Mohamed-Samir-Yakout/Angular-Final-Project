@@ -16,7 +16,7 @@ export class UserService {
   }
 
 
-  getUserById(uid: number): Observable< User> {
+  getUserById(uid: string): Observable< User> {
     return this.http.get< User>(`${environment.english_Api_URL}/users/${uid}`)
   }
 
