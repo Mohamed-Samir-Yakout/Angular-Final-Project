@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { AuthnticationService } from 'src/app/Services/authntication.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   language: string;
+  email:string=localStorage.getItem('User');
+  isAuthnticated:string=localStorage.getItem('authUser');
+  isLoading:boolean;
+  error:String=null;
+  userEmail:string='';
 
-  constructor() { }
+  constructor(private authService:AuthnticationService) { }
 
   ngOnInit(): void {
     this.language =localStorage.getItem('language') || 'en';
@@ -21,5 +28,32 @@ export class HeaderComponent implements OnInit {
 
 
   }
+  logOutForEmail(){
+    this.authService.logout();
+  
+    window.location.reload();
+  }
+  onClickLogin(userlogin:NgForm){
+    const email=userlogin.value.email;
+    const  password=userlogin.value.pwd;
+    this.isLoading=true;
+    this.authService.login(email,password).subscribe(resData=>{
+      this.isLoading=false;
+      this.error=null;
+       this.userEmail=resData.email;
+
+       window.location.reload();
+      
+    },
+    err=>{console.log(err)
+      this.isLoading=false;
+      this.error=err.error.error.message;
+    
+    })
+    userlogin.reset();
+  
+  
+  }
+  
 
 }
