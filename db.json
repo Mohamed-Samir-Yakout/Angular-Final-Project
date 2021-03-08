@@ -1,340 +1,348 @@
 {
-    "menu" : 
-         {
-             
-                 
-                     "meal" : "Share Box",
-                     "price": 14.5,
-                     "description" : "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
-         }
-             
-         
-    ,   
-    "moods" : [
+  "menu": {
+    "meal": "Share Box",
+    "price": 14.5,
+    "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+  },
+  "moods": [
     {
-    "mood":"Cheap Eats",
-    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ba76ec62-a72d-47e1-b1f9-05788a3ae54d.jpg"
+      "mood": "Cheap Eats",
+      "moodImage": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ba76ec62-a72d-47e1-b1f9-05788a3ae54d.jpg"
     },
     {
-    "mood":"Hidden Gems",
-    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b14c1e-2225-11e8-924e-0242ac110011.jpg"
+      "mood": "Hidden Gems",
+      "moodImage": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b14c1e-2225-11e8-924e-0242ac110011.jpg"
     },
     {
-    "mood":"Coffeeshops",
-    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b14b83-2225-11e8-924e-0242ac110011.jpg"
-
+      "mood": "Coffeeshops",
+      "moodImage": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b14b83-2225-11e8-924e-0242ac110011.jpg"
     },
     {
-    "mood":"Kids-Friendly",
-    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b152a1-2225-11e8-924e-0242ac110011.jpg"
-
+      "mood": "Kids-Friendly",
+      "moodImage": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b6b152a1-2225-11e8-924e-0242ac110011.jpg"
     }
-
-
-
-
-
-],
-
-
-
-
-    "resturants":
-        [
-            {
-                "id": "Bon-Apetit",
-                "Location": "Cairo",
-                "hotLine": 19101,
-                "Branches": 20,
-				"Dish": "Grills",
-				"Mood":"Hidden Gems",
-                "openNow" : true
-            },
-            {
-                "id": "Buffalo-Burger",
-                "Location": "Cairo",
-                "hotLine": 19914,
-                "Branches": 20,
-				"Dish": "Burgers",
-				"Mood":"Kids-Friendly",
-                "openNow" : true
-            },
-            {
-                "id": "Burger-King",
-                "Location": "Cairo",
-                "hotLine": 16977,
-                "Branches": 20,
-				"Dish": "Burgers",
-				"Mood":"Kids-Friendly",
-                "openNow" : true
-            },
-            {
-                "id": "Caracas",
-                "Location": "Cairo",
-                "hotLine": "N/A",
-                "Branches": 15,
-				"Dish": "Pasta",
-				"Mood":"Coffeeshops",
-                "openNow" : true
-            },
-            {
-                "id": "Crave",
-                "Location": "Cairo",
-                "hotLine": 16788,
-                "Branches": 20,
-				"Dish": "Pasta",
-				"Mood":"Coffeeshops",
-                "openNow" : true
-            },
-            {
-                "id": "Dunkin'",
-                "Location": "Cairo",
-                "hotLine": "N/A",
-                "Branches": 20,
-				"Dish": "Donauts",
-				"Mood":"Coffeeshops",
-                "openNow" : true
-            },
-            {
-                "id": "El-Abd",
-                "Location": "Cairo",
-                "hotLine": 16437,
-                "Branches": 20,
-				"Dish": "Desserts",
-				"Mood":"Coffeeshops",
-                "openNow" : true
-            },
-            {
-                "id": "El-Lido",
-                "Location": "Cairo",
-                "hotLine": "N/A",
-                "Branches": 20,
-				"Dish": "Desserts",
-				"Mood":"Coffeeshops"
-            },
-            {
-                "id": "ElDahan",
-                "Location": "Cairo",
-                "hotLine": 16194,
-                "Branches": 20,
-				"Dish": "Egyptian",
-				"Mood":"Cheap Eats"
-            },
-            {
-                "id": "GAD",
-                "Location": "Cairo",
-                "hotLine": "N/A",
-                "Branches": 20,
-				"Dish": "Foul",
-				"Mood":"Cheap Eats"
-            },
-            {
-                "id": "Hardee's",
-                "Location": "Cairo",
-                "hotLine": 19066,
-                "Branches": 40,
-				"Dish": "Burgers",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Majesty",
-                "Location": "Cairo",
-                "hotLine": 19915,
-                "Branches": 15,
-				"Dish": "Pizza",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Max-Burger",
-                "Location": "Cairo",
-                "hotLine": 19065,
-                "Branches": 15,
-				"Dish": "Burgers",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Mcdonald's",
-                "Location": "Cairo",
-                "hotLine": 19991,
-                "Branches": 50,
-				"Dish": "Burgers",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Mo'men",
-                "Location": "Cairo",
-                "hotLine": 16600,
-                "Branches": 20,
-				"Dish": "Sandwiches",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Mori-Sushi",
-                "Location": "Cairo",
-                "hotLine": 16885,
-                "Branches": 30,
-				"Dish": "Sushi",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "O's-Pasta",
-                "Location": "Cairo",
-                "hotLine": "N/A",
-                "Branches": 2,
-				"Dish": "Pasta",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Papa-John's",
-                "Location": "Cairo",
-                "hotLine": 19277,
-                "Branches": 30,
-				"Dish": "Pizza",
-				"Mood":"Hidden Gems"
-            },
-            {
-                "id": "Pastaweesy",
-                "Location": "Cairo",
-                "hotLine": 19034,
-                "Branches": 20,
-				"Dish": "Pasta",
-				"Mood":"Hidden Gems"
-            },
-            {
-                "id": "Paul",
-                "Location": "Cairo",
-                "hotLine": "N/A",
-                "Branches": 15,
-				"Dish": "Pizza",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Peking",
-                "Location": "Cairo",
-                "hotLine": 16078,
-                "Branches": 15,
-				"Dish": "Pizza",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Pizza-Hut",
-                "Location": "Cairo",
-                "hotLine": 19000,
-                "Branches": 30,
-				"Dish":"Pizza",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Rosto",
-                "Location": "Cairo",
-                "hotLine": "N/A",
-                "Branches": 20,
-				"Dish": "Grills",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Sabai-Sabai",
-                "Location": "Cairo",
-                "hotLine": "N/A",
-                "Branches": 2,
-				"Dish": "Grills",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Tabali",
-                "Location": "Cairo",
-                "hotLine": 19061,
-                "Branches": 20,
-				"Dish": "Foul",
-				"Mood":"Hidden Gems"
-            },
-            {
-                "id": "Zack's",
-                "Location": "Cairo",
-                "hotLine": 15198,
-                "Branches": 20,
-				"Dish": "FriedChicken",
-				"Mood":"Kids-Friendly"
-            },
-            {
-                "id": "Zi-Sushi",
-                "Location": "Cairo",
-                "hotLine": "N/A",
-                "Branches": 20,
-				"Dish": "Sushi",
-				"Mood":"Kids-Friendly"
-            }
-        ],
-        "Dishes":[{
-            "name":"Grills"
+  ],
+  "resturants": [
+    {
+      "id": "Bon-Apetit",
+      "Location": "Cairo",
+      "hotLine": 19101,
+      "Branches": 20,
+      "Dish": "Grills",
+      "Mood": "Hidden Gems",
+      "openNow": true
+    },
+    {
+      "id": "Buffalo-Burger",
+      "Location": "Cairo",
+      "hotLine": 19914,
+      "Branches": 20,
+      "Dish": "Burgers",
+      "Mood": "Kids-Friendly",
+      "openNow": true
+    },
+    {
+      "id": "Burger-King",
+      "Location": "Cairo",
+      "hotLine": 16977,
+      "Branches": 20,
+      "Dish": "Burgers",
+      "Mood": "Kids-Friendly",
+      "openNow": true
+    },
+    {
+      "id": "Caracas",
+      "Location": "Cairo",
+      "hotLine": "N/A",
+      "Branches": 15,
+      "Dish": "Pasta",
+      "Mood": "Coffeeshops",
+      "openNow": true
+    },
+    {
+      "id": "Crave",
+      "Location": "Cairo",
+      "hotLine": 16788,
+      "Branches": 20,
+      "Dish": "Pasta",
+      "Mood": "Coffeeshops",
+      "openNow": true
+    },
+    {
+      "id": "Dunkin'",
+      "Location": "Cairo",
+      "hotLine": "N/A",
+      "Branches": 20,
+      "Dish": "Donauts",
+      "Mood": "Coffeeshops",
+      "openNow": true
+    },
+    {
+      "id": "El-Abd",
+      "Location": "Cairo",
+      "hotLine": 16437,
+      "Branches": 20,
+      "Dish": "Desserts",
+      "Mood": "Coffeeshops",
+      "openNow": true
+    },
+    {
+      "id": "El-Lido",
+      "Location": "Cairo",
+      "hotLine": "N/A",
+      "Branches": 20,
+      "Dish": "Desserts",
+      "Mood": "Coffeeshops"
+    },
+    {
+      "id": "ElDahan",
+      "Location": "Cairo",
+      "hotLine": 16194,
+      "Branches": 20,
+      "Dish": "Egyptian",
+      "Mood": "Cheap Eats"
+    },
+    {
+      "id": "GAD",
+      "Location": "Cairo",
+      "hotLine": "N/A",
+      "Branches": 20,
+      "Dish": "Foul",
+      "Mood": "Cheap Eats"
+    },
+    {
+      "id": "Hardee's",
+      "Location": "Cairo",
+      "hotLine": 19066,
+      "Branches": 40,
+      "Dish": "Burgers",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Majesty",
+      "Location": "Cairo",
+      "hotLine": 19915,
+      "Branches": 15,
+      "Dish": "Pizza",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Max-Burger",
+      "Location": "Cairo",
+      "hotLine": 19065,
+      "Branches": 15,
+      "Dish": "Burgers",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Mcdonald's",
+      "Location": "Cairo",
+      "hotLine": 19991,
+      "Branches": 50,
+      "Dish": "Burgers",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Mo'men",
+      "Location": "Cairo",
+      "hotLine": 16600,
+      "Branches": 20,
+      "Dish": "Sandwiches",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Mori-Sushi",
+      "Location": "Cairo",
+      "hotLine": 16885,
+      "Branches": 30,
+      "Dish": "Sushi",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "O's-Pasta",
+      "Location": "Cairo",
+      "hotLine": "N/A",
+      "Branches": 2,
+      "Dish": "Pasta",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Papa-John's",
+      "Location": "Cairo",
+      "hotLine": 19277,
+      "Branches": 30,
+      "Dish": "Pizza",
+      "Mood": "Hidden Gems"
+    },
+    {
+      "id": "Pastaweesy",
+      "Location": "Cairo",
+      "hotLine": 19034,
+      "Branches": 20,
+      "Dish": "Pasta",
+      "Mood": "Hidden Gems"
+    },
+    {
+      "id": "Paul",
+      "Location": "Cairo",
+      "hotLine": "N/A",
+      "Branches": 15,
+      "Dish": "Pizza",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Peking",
+      "Location": "Cairo",
+      "hotLine": 16078,
+      "Branches": 15,
+      "Dish": "Pizza",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Pizza-Hut",
+      "Location": "Cairo",
+      "hotLine": 19000,
+      "Branches": 30,
+      "Dish": "Pizza",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Rosto",
+      "Location": "Cairo",
+      "hotLine": "N/A",
+      "Branches": 20,
+      "Dish": "Grills",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Sabai-Sabai",
+      "Location": "Cairo",
+      "hotLine": "N/A",
+      "Branches": 2,
+      "Dish": "Grills",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Tabali",
+      "Location": "Cairo",
+      "hotLine": 19061,
+      "Branches": 20,
+      "Dish": "Foul",
+      "Mood": "Hidden Gems"
+    },
+    {
+      "id": "Zack's",
+      "Location": "Cairo",
+      "hotLine": 15198,
+      "Branches": 20,
+      "Dish": "FriedChicken",
+      "Mood": "Kids-Friendly"
+    },
+    {
+      "id": "Zi-Sushi",
+      "Location": "Cairo",
+      "hotLine": "N/A",
+      "Branches": 20,
+      "Dish": "Sushi",
+      "Mood": "Kids-Friendly"
+    }
+  ],
+  "Dishes": [
+    {
+      "name": "Grills"
+    },
+    {
+      "name": "Egyptian"
+    },
+    {
+      "name": "Pasta"
+    },
+    {
+      "name": "Pizza"
+    },
+    {
+      "name": "FriedChicken"
+    },
+    {
+      "name": "Foul"
+    },
+    {
+      "name": "Sushi"
+    },
+    {
+      "name": "Sandwiches"
+    },
+    {
+      "name": "Desserts"
+    },
+    {
+      "name": "Donauts"
+    },
+    {
+      "name": "Burgers"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Mohamed",
+      "password": "ab123456789",
+      "email": "mohamed@osama.com"
+    },
+    {
+      "id": 2,
+      "name": "Ahmed",
+      "email": "ahmed@abdelsalam.com",
+      "password": "987654321"
+    },
+    {
+      "id": 3,
+      "name": "Salma",
+      "email": "Salma@salma.com",
+      "password": "itisohag2021"
+    }
+  ],
+  "admins": [
+    {
+      "id": 20211,
+      "name": "Mohamed",
+      "email": "mohamed@samir.com",
+      "password": "admin12021",
+      "auth": true
+    },
+    {
+      "id": 20212,
+      "name": "ahmed",
+      "email": "ahmed@magdy.com",
+      "password": "admin22021",
+      "auth": true
+    }
+  ],
+  "orders": [
+    {
+      "order": [
+        {
+          "meal": "Share Box",
+          "price": 14.5,
+          "quantity": 2,
+          "total": 29
         },
         {
-            "name":"Egyptian"
+          "meal": "Share Box",
+          "price": 14.5,
+          "quantity": 2,
+          "total": 29
         },
         {
-            "name":"Pasta"
-        },
-        {
-            "name":"Pizza"
-        },
-        {
-            "name":"FriedChicken"
-        } ,
-        {
-            "name":"Foul"
-        } ,
-        {
-            "name":"Sushi"
-        },
-        {
-            "name":"Sandwiches"
-        },
-        {
-            "name":"Desserts"
-        },
-        {
-            "name":"Donauts"
-        },
-        {
-            "name":"Burgers"
-        }     
-    
-    ],
-    "users": [
-        {
-          "id": 1,
-          "name": "Mohamed",
-          "password": "ab123456789",
-          "email": "mohamed@osama.com"
-        },
-        {
-          "id": 2,
-          "name": "Ahmed",
-          "email": "ahmed@abdelsalam.com",
-          "password": "987654321"
-        },
-        {
-          "id": 3,
-          "name": "Salma",
-          "email": "Salma@salma.com",
-          "password": "itisohag2021"
+          "meal": "Share Box",
+          "price": 14.5,
+          "quantity": 1,
+          "total": 14.5
         }
       ],
-      "admins": [
-        {
-          "id": 20211,
-          "name": "Mohamed",
-          "email": "mohamed@samir.com",
-          "password": "admin12021",
-          "auth": true
-        },
-        {
-          "id": 20212,
-          "name": "ahmed",
-          "email": "ahmed@magdy.com",
-          "password": "admin22021",
-          "auth": true
-        }
-      ]
-    
+      "totalprice": 83.5,
+      "deliveryfee": 11,
+      "id": 1
+    }
+  ]
 }

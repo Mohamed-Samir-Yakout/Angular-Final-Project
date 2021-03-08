@@ -14,6 +14,8 @@ import { SendGiftComponent } from './Components/send-gift/send-gift.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { HomeComponent } from './Components/home/home.component';
 import { AuthGuardGuard } from './Services/auth-guard.guard';
+import { CheckOutComponent } from './Components/check-out/check-out.component';
+import { ThankYouComponent } from './Components/thank-you/thank-you.component';
 
 const routes: Routes = [
   { path: 'Admin', component: AdminDashboardComponent },
@@ -22,15 +24,16 @@ const routes: Routes = [
   { path: 'About-Us', component: AboutUsComponent },
   { path: 'Home', component: HomeComponent },
   { path: 'Gift-Meals', component: GiftComponent },
-  { path: 'My-Order', component: MyOrderComponent },
-  { path: 'Account-Settings', component: AccountSettingsComponent },
+  { path: 'My-Order', component: MyOrderComponent, canActivate: [AuthGuardGuard] },
   { path: 'delivery', component: OnlineDeliveryComponent },
-  { path: 'resturants/:rid', component: ResturantProfileComponent,canActivate:[AuthGuardGuard] },
-  { path: 'settings', component: UserProfileComponent },
+  { path: 'resturants/:rid', component: ResturantProfileComponent },
+  { path: 'settings', component: UserProfileComponent, canActivate: [AuthGuardGuard] },
   { path: 'gift', component: GiftComponent },
   { path: 'sendGift', component: SendGiftComponent },
   { path: "DineOut", loadChildren: () => import('./Components/dine-out/dine-out.module').then(m => m.DineOutModule) },
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
+  { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuardGuard] },
+  { path: 'sent', component: ThankYouComponent },
   { path: '**', component: NotFoundComponent },
 
 ];

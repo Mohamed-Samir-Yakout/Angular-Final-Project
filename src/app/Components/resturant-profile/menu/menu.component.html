@@ -32,6 +32,7 @@
             <span class="row mb-2">{{menu.meal}}</span>
             <small class="itemDesc row">{{menu.description}}</small>
             <i class="fas fa-plus-circle" style="color: orangered;">{{menu.price | currency:'EGP'}}</i>
+            <button type="button" class="btn btn-outline-danger ml-3 btn-sm" (click)="addToCart(menu.meal, menu.price)">Add to cart</button>
           </div>
           <div id="itemImg" class="col-md-3 col-sm-4">
             <img src="../../../../assets/Images/itemImg.jpg" alt="" style="max-width: 100%;" class="row">
@@ -50,6 +51,7 @@
             <span class="row mb-2">{{menu.meal}}</span>
             <small class="itemDesc row">{{menu.description}}</small>
             <i class="fas fa-plus-circle" style="color: orangered;">{{menu.price | currency:'EGP'}}</i>
+            <button type="button" class="btn btn-outline-danger ml-3 btn-sm" (click)="addToCart(menu.meal, menu.price)">Add to cart</button>
           </div>
           <div id="itemImg" class="col-md-3 col-sm-4">
             <img src="../../../../assets/Images/itemImg.jpg" alt="" style="max-width: 100%;" class="row">
@@ -69,6 +71,7 @@
             <span class="row mb-2">{{menu.meal}}</span>
             <small class="itemDesc row">{{menu.description}}</small>
             <i class="fas fa-plus-circle" style="color: orangered;">{{menu.price | currency:'EGP'}}</i>
+            <button type="button" class="btn btn-outline-danger ml-3 btn-sm" (click)="addToCart(menu.meal, menu.price)">Add to cart</button>
           </div>
           <div id="itemImg" class="col-md-3 col-sm-4">
             <img src="../../../../assets/Images/itemImg.jpg" alt="" style="max-width: 100%;" class="row">
@@ -97,6 +100,8 @@
       <button id="changeAdd" type="button" class="btn  mt-3 col-md-10 col-sm-7 ml-3" style="text-align: center;">Change
         Address &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt;</button>
     </div>
+
+    <button id="checkoutBtn" class="btn-lg mt-3" (click)="checkOut()">Continue To Checkout</button>
 
 
   </aside>

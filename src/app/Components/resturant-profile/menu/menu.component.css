@@ -31,3 +31,14 @@
     box-shadow: 1px 3px 5px black;
 
 }
+
+#checkoutBtn{
+    border: 1px black solid;
+    background-color: white;
+    color: black;
+}
+
+#checkoutBtn:hover{
+    background-color: orangered;
+    color: white;
+} 

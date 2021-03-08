@@ -24,6 +24,8 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { SearchPipe } from './Pipes/search-pipe.pipe';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { CheckOutComponent } from './Components/check-out/check-out.component';
+import { ThankYouComponent } from './Components/thank-you/thank-you.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'./assets/i18n/','.json');
@@ -51,7 +53,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     HomeComponent,
     SearchPipe,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    CheckOutComponent,
+    ThankYouComponent
 
 
   ],

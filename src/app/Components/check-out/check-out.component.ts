@@ -1,0 +1,76 @@
+import { Component, DoCheck, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { OrdersService } from 'src/app/Services/orders.service';
+import { SharedService } from 'src/app/Services/shared.service';
+import { Iorder } from 'src/app/ViewModels/iorder';
+
+@Component({
+  selector: 'app-check-out',
+  templateUrl: './check-out.component.html',
+  styleUrls: ['./check-out.component.css']
+})
+export class CheckOutComponent implements OnInit, DoCheck {
+
+  registeredAddress: boolean = false;
+  payCash: boolean = false;
+  paymentMethod: FormGroup;
+  price: number = 12
+  totalItemPrice: number = 0;
+  itemCount: number = 1;
+  deliveryFee: number = 11;
+  totalOrderPrice: number = 0;
+  myOrder: Iorder[] = []
+
+
+  constructor(fb: FormBuilder, private shService: SharedService, private oService: OrdersService, private router: Router) {
+    this.paymentMethod = fb.group({
+      method: ["Credit", Validators.required]
+    })
+
+
+  }
+  ngDoCheck(): void {
+    if (this.paymentMethod.value.method === "Cash") {
+      this.payCash = true
+    } else {
+      this.payCash = false
+    }
+    //this.totalItemPrice = this.price * this.itemCount
+    this.myOrder.forEach(item => {
+      item.total = item.price * item.quantity
+    })
+
+    this.totalItemPrice = this.myOrder.map(item => item.total).reduce(function (a, b) {
+      return a + b
+    })
+
+    this.totalOrderPrice = this.totalItemPrice + this.deliveryFee
+  }
+
+  ngOnInit(): void {
+    console.log(this.paymentMethod.value.method)
+    this.myOrder = this.shService.getOrderList()
+
+  }
+
+  deleteFromOrder(i: number) {
+    if (this.myOrder.length > 1) {
+      this.myOrder.splice(i, 1)
+    } else {
+      this.myOrder.splice(i, 1, { meal: "meal", price: 0, quantity: 0 })
+    }
+    console.log(this.myOrder)
+  }
+
+  checkOut() {
+    this.oService.addOrder({ order: this.myOrder, totalprice: this.totalOrderPrice, deliveryfee: this.deliveryFee }).subscribe(
+      (res) => {
+        this.router.navigateByUrl('/sent')
+      },
+      (err) => { console.log(err) }
+    )
+
+  }
+
+}
