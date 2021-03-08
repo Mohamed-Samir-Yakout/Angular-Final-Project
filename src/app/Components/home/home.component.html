@@ -19,7 +19,7 @@
           font-weight: bold;
         "
       >
-        LOGIN
+        {{"Home.LOGIN"|translate}}
       </button>
 
       <div     class="modal fade" id="myModal" role="dialog"  >
@@ -75,23 +75,6 @@
                   
               
               />
-              <!-- <input
-                class="btn"
-                type="submit"
-                value="LOGIN WITH FACEBOOK"
-                style="
-                  width: 460px;
-                  background-color: #0f3c70;
-                  color: white;
-                  margin-bottom: 20px;
-                "
-              /> -->
-              <!-- <input
-                class="btn btn-primary"
-                type="submit"
-                value="LOGIN WITH GOOGLE"
-                style="width: 460px; color: white; margin-bottom: 20px"
-              /> -->
               <p style="font-size: 15px; color: white">
                 <a href="" style="color: #e5533a">FORGET PASSWORD?</a>
               </p>
@@ -126,7 +109,7 @@
           font-weight: bold;
         "
       >
-        SIGNUP
+        {{"Home.SignUp"|translate}}
       </button>
 
       <div class="modal fade" id="myModal2" role="dialog">
@@ -203,9 +186,9 @@
         </div>
       </div>
     </div>
-    <div  *ngIf='userEmail'>{{userEmail}}</div>
-    <div  (click)="logOutForEmail()"  *ngIf='isAuthnticated'  style="
+    <div  class="btn" (click)="logOutForEmail()"  *ngIf='isAuthnticated'  style="
     color: white;
+    background-color: orangered;
     
     margin-top: 30px;
     font-size: 20px;
@@ -237,14 +220,6 @@
           class="form-control"
           placeholder="Search Restaurants By Name"
         />
-        <div class="input-group-append">
-          <button
-            class="btn btn-secondary"
-            (click)="navigateToRestaurantMatchesSearch()"
-          >
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
       </div>
     </div>
 
@@ -255,6 +230,7 @@
     </div>
 
     <div
+    (click)="navigateToRestaurantMatchesSearch()"
       class="col-md-1 col-sm-12 col-sm-push-8 section-text"
       style="
         border-radius: 10px;
@@ -264,10 +240,10 @@
         position: relative;
       "
     >
-      <a
-        routerLink="/delivery"
-        style="color: white; position: absolute; top: 18%; margin-left: 25px"
-        >{{ "Home.searchBtn" | translate }}</a
+      <button
+      class='btn'
+        style="color: white; position: absolute; top: 18%; margin-left: 25px ;font-size: 15;"
+        >{{ "Home.searchBtn" | translate }}</button
       >
     </div>
     <br/>
@@ -297,7 +273,7 @@
     >
       <p style="font-size: 20px; color: white">
         {{ "Home.send great Food" | translate }}
-        <a routerLink="/delivery" style="color: #e5533a">{{
+        <a  routerLink="/delivery" style="color: #e5533a">{{
           "Home.try now" | translate
         }}</a>
       </p>
@@ -352,7 +328,7 @@
         padding: 30px 10px 10px 10px;
       "
     >
-      <a routerLink="/DineOut">
+      <a  routerLink="/DineOut">
         <div style="color: black; padding-left: 20px">
           <i
             class="fas fa-utensils"

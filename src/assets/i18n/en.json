@@ -58,7 +58,9 @@
             "No Phone Calls Pargraph": "Order your favorite food easier, faster, and without phone calls.",
             "Looking for delivery":"Looking for delivery",
             "Look for restaurants that have this sign":"Look for restaurants that have this sign",
-            "Order Online Now Btn":"Order Online Now"
+            "Order Online Now Btn":"Order Online Now",
+            "LOGIN":"LOGIN",
+            "SignUp":"SIGNUP"
 
         }
 }

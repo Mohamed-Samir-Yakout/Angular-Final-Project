@@ -6,8 +6,14 @@
   },
   "moods": [
     {
+<<<<<<< HEAD
       "mood": "Cheap Eats",
       "moodImage": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ba76ec62-a72d-47e1-b1f9-05788a3ae54d.jpg"
+=======
+    
+    "mood":"Cheap Eats",
+    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ba76ec62-a72d-47e1-b1f9-05788a3ae54d.jpg"
+>>>>>>> b5ba7c6d64e59322735f7617275c755681f6b98c
     },
     {
       "mood": "Hidden Gems",

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { User } from '../ViewModels/iusers';
 import {tap} from 'rxjs/operators'
-import { ElementSchemaRegistry } from '@angular/compiler';
+import { SharedService } from './shared.service';
 interface AuthnResponseData { 
   idToken: string;
   email: string;
@@ -19,9 +19,10 @@ interface AuthnResponseData {
 })
 export class AuthnticationService {
   user=new Subject<User>();
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private sharedService:SharedService) {}
 
   signUp(email: String, password: String) {
+
     return this.http.post<AuthnResponseData>(
       'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyClLvMuz0wAZ5PcYcnU9DfWaUXGJ_JsFFw',
 
@@ -37,15 +38,19 @@ export class AuthnticationService {
 
     }))
     ;
+    
   }
   private handleAuthntication(email:string,token:string,id:string,expiresData:number){
     const expireDate=new Date(new Date().getTime()+expiresData*1000);
      const user=new User(id,email,token,expireDate);
      this.user.next(user);
+     localStorage.setItem('authUser',token);
+     localStorage.setItem("User",user.email)
        
   }
 
   login(email: String, password: String){
+
      return this.http.post<AuthnResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyClLvMuz0wAZ5PcYcnU9DfWaUXGJ_JsFFw',
     {
       email: email,
@@ -66,6 +71,7 @@ export class AuthnticationService {
   logout(){
     this.user.next(null);
     localStorage.removeItem('authUser');
+    localStorage.removeItem('User')
   }
 
   islogged():boolean{

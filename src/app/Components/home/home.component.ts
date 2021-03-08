@@ -18,22 +18,27 @@ export class HomeComponent implements OnInit,OnDestroy {
   restaurantsList:Iresturant[];
   restaurantNameList:String[]=[]
   subscription: Subscription;
-  isLoading:boolean=false;
+  isLoading:boolean;
   error:String=null;
   isAuthnticated:string=localStorage.getItem('authUser');
+  expires:any;
+ 
+  
+  private userSub:Subscription;
   userEmail:string='';
   
 
   constructor(private mySharedService:SharedService,private router:Router,private resDatea: ResturantDataService,private authService :AuthnticationService) {
    
 console.log(this.isAuthnticated)
+console.log(this.expires)
 
   }
   ngOnDestroy(): void {
   
   }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.restaurantName='';
     this.subscription = this.resDatea.getAllRest().subscribe(
       (res) => {
@@ -76,8 +81,6 @@ onSubmit(form:NgForm){
       console.log(resData.email)
       this.isLoading=false;
       this.error=null;
-      localStorage.setItem('authUser',resData.idToken);
-      window.location.reload();
     
     },
     err=>{console.log(err)
@@ -101,8 +104,9 @@ onClickLogin(userlogin:NgForm){
     this.isLoading=false;
     this.error=null;
      this.userEmail=resData.email;
-    localStorage.setItem('authUser',resData.idToken);
-    window.location.reload();
+     this.expires=resData.expiresIn
+     window.location.reload();
+    
   },
   err=>{console.log(err)
     this.isLoading=false;
@@ -110,11 +114,12 @@ onClickLogin(userlogin:NgForm){
   
   })
   userlogin.reset();
-  // 
+
 
 }
 logOutForEmail(){
   this.authService.logout();
+
   window.location.reload();
 }
 }
