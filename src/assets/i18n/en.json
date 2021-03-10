@@ -4,7 +4,8 @@
         "DiscoverByCategory":"Discover by Moods",
         "DiscoverByDishes":"Discover by Dishes",
         "DiscoverByLocation":"Discover BY Cairo",
-        "SeeAll":"SeeAll"
+        "SeeAll":"SeeAll",
+        "Dineout":"Dine out"
     },
     "header":{
 
@@ -63,4 +64,24 @@
             "SignUp":"SIGNUP"
 
         }
+        ,
+ "Delivery":{
+
+  "fastfood":"fast food",
+  "Order online":"Order online",
+  "Show result for":"Show result for",
+  "Online ordering only":"Online ordering only",
+  "elmenus Order online":"elmenus Order online",
+  "Open now":"Open now",
+  "Promo":"Promo",
+  "Hygiene Check":"Hygiene Check",
+  "Sort by":"Sort by",
+  "Popular":"Popular",
+  "Rating":"Rating",
+  "Delivery Time":"Delivery Time",
+  "load more rest":"Load more Restaurants",
+  "Deliver":"Deliver",
+  "cairo":"cairo"
+
+ }
 }

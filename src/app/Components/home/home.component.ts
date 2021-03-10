@@ -22,13 +22,11 @@ export class HomeComponent implements OnInit,OnDestroy {
   error:String=null;
   isAuthnticated:string=localStorage.getItem('authUser');
   expires:any;
- 
-  
   private userSub:Subscription;
   userEmail:string='';
   
 
-  constructor(private mySharedService:SharedService,private router:Router,private resDatea: ResturantDataService,private authService :AuthnticationService) {
+constructor(private mySharedService:SharedService,private router:Router,private resDatea: ResturantDataService,private authService :AuthnticationService) {
    
 console.log(this.isAuthnticated)
 console.log(this.expires)
@@ -81,6 +79,7 @@ onSubmit(form:NgForm){
       console.log(resData.email)
       this.isLoading=false;
       this.error=null;
+      window.location.reload();
     
     },
     err=>{console.log(err)

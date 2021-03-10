@@ -381,6 +381,7 @@
         {
           "meal": "Share Box",
           "price": 14.5,
+<<<<<<< HEAD
           "quantity": 1,
           "total": 14.5
         },
@@ -393,10 +394,13 @@
         {
           "meal": "Share Box",
           "price": 14.5,
+=======
+>>>>>>> fae5844803443be38436484466633850a9a436ad
           "quantity": 2,
           "total": 29
         }
       ],
+<<<<<<< HEAD
       "totalprice": 83.5,
       "deliveryfee": 11,
       "id": 2
@@ -425,6 +429,11 @@
       "totalprice": 70,
       "deliveryfee": 11,
       "id": 3
+=======
+      "totalprice": 40,
+      "deliveryfee": 11,
+      "id": 2
+>>>>>>> fae5844803443be38436484466633850a9a436ad
     }
   ]
 }
