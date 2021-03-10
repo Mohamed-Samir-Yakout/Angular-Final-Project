@@ -13,12 +13,12 @@
     <div class="col-4 d-none d-md-inline-block align-items-baseline">
       <i class="fas fa-motorcycle" style="font-size:xx-large;"></i>
       <span class="col-3">
-        <span style="font-size: xx-large;">Deliver</span>
+        <span style="font-size: xx-large;">{{"Delivery.Deliver"|translate}}</span>
         <i class="far fa-arrow-alt-circle-right"></i>
       </span>
   
       <span style="font-size:xx-large; color: orangered;">
-        Cairo
+        {{"Delivery.cairo"|translate}}
       </span>
   
     </div>
@@ -85,12 +85,12 @@
 
 
 
-                <h4 class="col-sm-12" style="color: grey;">Show result for:</h4>
+                <h4 class="col-sm-12" style="color: grey;">{{"Delivery.Show result for"|translate}}</h4>
                 <div class="col-md-12 border-bottom mb-3 mt-3 pb-3">
                     <div class="custom-control custom-switch ">
                         <input #OrderOnline type="checkbox" (change)='orderOnline=!orderOnline' [checked]='orderOnline' class="custom-control-input" id="customSwitch1" value="Online Ordering">
-                        <label class="custom-control-label" for="customSwitch1">Online ordering only<br>
-                           <small style="color: green;"><i class="fas fa-check-circle"></i> elmenus Order online</small></label>
+                        <label class="custom-control-label" for="customSwitch1">{{"Delivery.Online ordering only"|translate}}<br>
+                           <small style="color: green;"><i class="fas fa-check-circle"></i> {{"Delivery.elmenus Order online"|translate}}</small></label>
                       </div>
                 </div>
 
@@ -99,7 +99,7 @@
                         <input  class="form-check-input" (change)='openNow=!openNow' [checked]='openNow'  type="checkbox" value="Open now" id="openCheck">
                         <label class="form-check-label" for="defaultCheck1">&nbsp;
                             <small><i class="fas fa-door-open" style="color: grey;"></i></small>	&nbsp;
-                            <small  style="color: grey;">Open now</small>
+                            <small  style="color: grey;">{{"Delivery.Open now"|translate}}</small>
                         </label>
                       </div>
                       <div class="form-check mb-2">
@@ -107,7 +107,7 @@
                         <label class="form-check-label" for="defaultCheck2">
                             &nbsp;
                             <small><i class="fas fa-percentage" style="color: grey;"></i></small>	&nbsp;
-                            <small  style="color: grey;">Promo</small>
+                            <small  style="color: grey;">{{"Delivery.Promo"|translate}}</small>
                         </label>
                       </div>
                       <div class="form-check mb-2">
@@ -115,29 +115,29 @@
                         <label class="form-check-label" for="defaultCheck3">
                             &nbsp;
                             <small><i class="fas fa-utensils" style="color: grey;"></i></small>	&nbsp;
-                            <small  style="color: grey;"> Hygiene Check</small>
+                            <small  style="color: grey;"> {{"Delivery.Hygiene Check"|translate}}</small>
                         </label>
                       </div>
                 </div>
 
                 <div class="col-md-12 border-bottom mb-3 mt-1 pb-4 col-5">
-                    <h6 style="color: grey;">Sort by:</h6>
+                    <h6 style="color: grey;">{{"Delivery.Sort by"|translate}}:</h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Popular" checked>
                         <label class="form-check-label" for="exampleRadios1">
-                          Popular
+                         {{"Delivery.Popular"|translate}}
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Rating">
                         <label class="form-check-label" for="exampleRadios2">
-                         Rating
+                         {{"Delivery.Rating"|translate}}
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="Delivery Time">
                         <label class="form-check-label" for="exampleRadios3">
-                         Delivery Time
+                         {{"Delivery.Delivery Time"|translate}}
                         </label>
                       </div>
                 </div>
@@ -154,9 +154,9 @@
                 <div class="row" id="TDItems" >
                   <div  class="col-md-4 col-5 items1"  *ngFor="let item of filteredRestList, let s = index" [hidden]="s > itemsCount" >
                     <img src="../../../assets/Images/download2.jpg" alt="" style="max-width: 100%;">
-                    <div class="col-md-12">
-                        <small class="TDtxt1 mr-5">fast food</small>
-                        <small class="ml-4" style="color: green;"><i class="fas fa-check-circle"></i>Order online</small>
+                    <div class="col-md-12" >
+                        <small class="TDtxt1 mr-5" style="margin-left: 10px;">{{"Delivery.fastfood"|translate}}</small>
+                        <small class="ml-4" style="color: green;"><i class="fas fa-check-circle"></i>{{"Delivery.Order online"|translate}}</small>
                     </div>
                     <div  class="col-md-12">
                         <a  [routerLink]="'/resturants/'+item.id"><span>{{item.id}}</span></a><br>
@@ -170,7 +170,7 @@
                 </div>
 
                 <div [hidden]="!noMoreLoad" class="col-md-12">
-                  <button type="button" class="btn  col-md-12 mt-4 w-100" id="loadBtn" (click)="viewMore()">Load More Resturants</button>
+                  <button type="button" class="btn  col-md-12 mt-4 w-100" id="loadBtn" (click)="viewMore()">{{"Delivery.load more rest"|translate}}</button>
                  </div>
               </div>
 

@@ -4,7 +4,8 @@
     "DiscoverByCategory": "إكتشف الخروجات",
     "DiscoverByDishes": "إكتشف الأكلات",
     "DiscoverByLocation": "اكتشف القاهرة",
-    "SeeAll": "رؤية الكل"
+    "SeeAll": "رؤية الكل",
+    "Dineout":"تناول العشاء خارجا"
   },
   "header": {
     "DELIVERY": "ديليفري",
@@ -59,5 +60,27 @@
     "LOGIN": "تسجيل دخول ",
     "SignUp":"حساب جديد"
 
+ },
+ "Delivery":{
+
+  "fastfood":"اكلات سريعه",
+  "Order online":"اطلب عبر الإنترنت",
+  "Show result for":"عرض نتيجة",
+  "Online ordering only":"الطلب عبر الإنترنت فقط",
+  "elmenus Order online":"المنيوز اطلب اون لاين",
+  "Open now":"مفتوح الان",
+  "Promo":"برومو",
+  "Hygiene Check":"فحص النظافة",
+  "Sort by":"ترتيب حسب",
+  "Popular":"مشهور",
+  "Rating":"تقييم",
+  "Delivery Time":"موعد التسليم",
+  "load more rest":"المزيد",
+  "Deliver":"توصيل",
+  "cairo":"القاهره"
+
  }
+
+
+   
 }
