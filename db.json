@@ -1,19 +1,45 @@
 {
-  "menu": {
-    "meal": "Share Box",
-    "price": 14.5,
-    "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
-  },
+  "menu": [
+    {
+      "meal": "Share Box",
+      "price": 14.5,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Big Mac",
+      "price": 40,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Big Tasty Sauce",
+      "price": 4.5,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Grand Share Box",
+      "price": 175,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Double Big Tasty",
+      "price": 82,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Share Box",
+      "price": 25,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Chicken MACDO",
+      "price": 22,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    }
+  ],
   "moods": [
     {
-<<<<<<< HEAD
       "mood": "Cheap Eats",
       "moodImage": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ba76ec62-a72d-47e1-b1f9-05788a3ae54d.jpg"
-=======
-    
-    "mood":"Cheap Eats",
-    "moodImage":"https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ba76ec62-a72d-47e1-b1f9-05788a3ae54d.jpg"
->>>>>>> b5ba7c6d64e59322735f7617275c755681f6b98c
     },
     {
       "mood": "Hidden Gems",
@@ -349,6 +375,56 @@
       "totalprice": 83.5,
       "deliveryfee": 11,
       "id": 1
+    },
+    {
+      "order": [
+        {
+          "meal": "Share Box",
+          "price": 14.5,
+          "quantity": 1,
+          "total": 14.5
+        },
+        {
+          "meal": "Share Box",
+          "price": 14.5,
+          "quantity": 2,
+          "total": 29
+        },
+        {
+          "meal": "Share Box",
+          "price": 14.5,
+          "quantity": 2,
+          "total": 29
+        }
+      ],
+      "totalprice": 83.5,
+      "deliveryfee": 11,
+      "id": 2
+    },
+    {
+      "order": [
+        {
+          "meal": "Share Box",
+          "price": 14.5,
+          "quantity": 1,
+          "total": 14.5
+        },
+        {
+          "meal": "Big Mac",
+          "price": 40,
+          "quantity": 1,
+          "total": 40
+        },
+        {
+          "meal": "Big Tasty Sauce",
+          "price": 4.5,
+          "quantity": 1,
+          "total": 4.5
+        }
+      ],
+      "totalprice": 70,
+      "deliveryfee": 11,
+      "id": 3
     }
   ]
 }

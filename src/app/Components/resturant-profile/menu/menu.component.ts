@@ -12,9 +12,9 @@ import { Iorder } from 'src/app/ViewModels/iorder';
 })
 export class MenuComponent implements OnInit, DoCheck {
 
-  menu: Imenu = { meal: '', price: 0, description: '' }
+  menu: Imenu[] = []
 
-  repeat: number[] = [1, 2, 3, 4, 5, 6, 7, 8]
+  localstorageCheck: boolean;
 
   order: Iorder[] = []
 
@@ -35,10 +35,16 @@ export class MenuComponent implements OnInit, DoCheck {
         console.log(err)
       }
     )
+
+
   }
 
   addToCart(mealName: string, mealPrice: number) {
-    this.order.push({ meal: mealName, price: mealPrice, quantity: 1 })
+    if (localStorage.getItem('authUser')) {
+      this.order.push({ meal: mealName, price: mealPrice, quantity: 1 })
+    } else {
+      alert('Please Login First')
+    }
   }
 
   checkOut() {

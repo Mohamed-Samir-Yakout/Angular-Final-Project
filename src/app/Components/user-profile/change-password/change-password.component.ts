@@ -15,7 +15,7 @@ export class ChangePasswordComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-  changePass:  User
+  changePass: User
   confirmNewPass: string;
   oldPass: string
   // currentUserData:  User = { id: '', email: "" }
