@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ResturantDataService } from 'src/app/Services/resturant-data.service';
 import { Iresturant } from 'src/app/ViewModels/iresturant';
@@ -9,7 +9,8 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
   styleUrls: ['./resturant-profile.component.css']
 })
 export class ResturantProfileComponent implements OnInit {
-  resturant: Iresturant = { id: '', Location: '', hotLine: 0, Branches: 0 ,Mood:""}
+  @Input() restName: string;
+  resturant: Iresturant = { id: '', Location: '', hotLine: 0, Branches: 0, Mood: "" }
   aboutRest: boolean = false;
   restMenu: boolean = true;
   restBranches: boolean = false;

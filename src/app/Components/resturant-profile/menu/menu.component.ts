@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { Component, DoCheck, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ResturantDataService } from 'src/app/Services/resturant-data.service';
 import { SharedService } from 'src/app/Services/shared.service';
@@ -11,7 +11,7 @@ import { Iorder } from 'src/app/ViewModels/iorder';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit, DoCheck {
-
+  @Input() restName: string
   menu: Imenu[] = []
 
   localstorageCheck: boolean;
@@ -48,6 +48,7 @@ export class MenuComponent implements OnInit, DoCheck {
   }
 
   checkOut() {
+    this.shService.setResturantName(this.restName)
     if (localStorage.getItem('authUser')) {
       this.router.navigateByUrl('/check-out')
     } else {

@@ -9,6 +9,7 @@ export class SharedService {
   valueSearched: string = '';
   loggedInUser: User;
   orderList: Iorder[];
+  returantName: string;
 
   constructor() { }
 
@@ -35,6 +36,14 @@ export class SharedService {
 
   getOrderList(): Iorder[] {
     return this.orderList
+  }
+
+  setResturantName(restName: string): void {
+    this.returantName = restName;
+  }
+
+  getResturantName(): string {
+    return this.returantName
   }
 
 }
