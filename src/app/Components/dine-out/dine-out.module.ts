@@ -11,6 +11,7 @@ import { DiscoverByCategoryComponent } from './dine-out-details/discover-by-cate
 import { DiscoverByDishesComponent } from './dine-out/discover-by-dishes/discover-by-dishes.component';
 import {TranslateModule} from '@ngx-translate/core';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -25,7 +26,8 @@ const routes : Routes=[{path:'' ,component: DineOutComponent},
     CommonModule,
     RouterModule.forChild(routes),
     TranslateModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    FormsModule
   ]
 })
 export class DineOutModule { }
