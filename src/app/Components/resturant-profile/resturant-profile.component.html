@@ -8,7 +8,7 @@
 
     <section class="row border-bottom" id="header">
         <div class="col-md-2 col-sm-6 col-sm-1 ml-4" id="headerLogo" > 
-             <img src="../../../assets/Images/Logo.png" id="logo" alt=""><br>
+             <img [src]="resturant.img" id="logo" alt=""><br>
              <span id="status" class="d-none">Opens in 12 hours</span>
         </div>
 
@@ -91,7 +91,7 @@
                 </div>
  
                 <div class="col-md-5 col-sm-5 pl-5">
-                   <a href="#" style="color: orangered; text-decoration: underline;">View Scanned menu&gt;</a>
+                   <a  style="color: orangered; text-decoration: underline;">View Scanned menu&gt;</a>
                 </div>
  
             </section>
@@ -100,7 +100,7 @@
             
            
              <app-about [hidden]='!aboutRest'></app-about>
-             <app-menu [hidden]='!restMenu'></app-menu>
+             <app-menu [hidden]='!restMenu' [restName]='resturant.id'></app-menu>
 
              <app-branches [hidden]='!restBranches'></app-branches>
 

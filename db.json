@@ -1,9 +1,41 @@
 {
-  "menu": {
-    "meal": "Share Box",
-    "price": 14.5,
-    "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
-  },
+  "menu": [
+    {
+      "meal": "Share Box",
+      "price": 14.5,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Big Mac",
+      "price": 40,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Big Tasty Sauce",
+      "price": 4.5,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Grand Share Box",
+      "price": 175,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Double Big Tasty",
+      "price": 82,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Share Box",
+      "price": 25,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    },
+    {
+      "meal": "Chicken MACDO",
+      "price": 22,
+      "description": "Pick 2 sandwiches from Big Mac (beef/chicken) and McChicken + 2 sandwiches from Beefburger, cheeseburger and Chicken MacDo + 2 regular fries + 1.25 liter Coke"
+    }
+  ],
   "moods": [
     {
       "mood": "Cheap Eats",

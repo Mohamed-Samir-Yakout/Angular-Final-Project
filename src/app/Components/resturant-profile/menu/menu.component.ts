@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { Component, DoCheck, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ResturantDataService } from 'src/app/Services/resturant-data.service';
 import { SharedService } from 'src/app/Services/shared.service';
@@ -11,10 +11,10 @@ import { Iorder } from 'src/app/ViewModels/iorder';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit, DoCheck {
+  @Input() restName: string
+  menu: Imenu[] = []
 
-  menu: Imenu = { meal: '', price: 0, description: '' }
-
-  repeat: number[] = [1, 2, 3, 4, 5, 6, 7, 8]
+  localstorageCheck: boolean;
 
   order: Iorder[] = []
 
@@ -35,13 +35,20 @@ export class MenuComponent implements OnInit, DoCheck {
         console.log(err)
       }
     )
+
+
   }
 
   addToCart(mealName: string, mealPrice: number) {
-    this.order.push({ meal: mealName, price: mealPrice, quantity: 1 })
+    if (localStorage.getItem('authUser')) {
+      this.order.push({ meal: mealName, price: mealPrice, quantity: 1 })
+    } else {
+      alert('Please Login First')
+    }
   }
 
   checkOut() {
+    this.shService.setResturantName(this.restName)
     if (localStorage.getItem('authUser')) {
       this.router.navigateByUrl('/check-out')
     } else {

@@ -69,8 +69,10 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
   viewMore(): number | boolean {
     if (this.itemsCount < this.restLit.length) {
       return this.itemsCount += 6
+    } else {
+      return this.noMoreLoad = false
     }
-    return this.noMoreLoad = false
+
   }
 
   clearAll() {

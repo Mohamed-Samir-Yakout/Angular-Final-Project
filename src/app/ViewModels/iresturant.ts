@@ -5,6 +5,8 @@ export interface Iresturant {
     Branches: number,
     Dish?: string,
     Mood?: string,
-    openNow?: boolean
+    openNow?: boolean,
+    img: string,
+    mealImg: string
 
 }

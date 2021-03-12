@@ -21,6 +21,8 @@ export class CheckOutComponent implements OnInit, DoCheck {
   deliveryFee: number = 11;
   totalOrderPrice: number = 0;
   myOrder: Iorder[] = []
+  restName: string;
+  userEmail: string;
 
 
   constructor(fb: FormBuilder, private shService: SharedService, private oService: OrdersService, private router: Router) {
@@ -50,8 +52,9 @@ export class CheckOutComponent implements OnInit, DoCheck {
 
   ngOnInit(): void {
     console.log(this.paymentMethod.value.method)
-    this.myOrder = this.shService.getOrderList()
-
+    this.myOrder = this.shService.getOrderList();
+    this.restName = this.shService.getResturantName();
+    this.userEmail = localStorage.getItem('User');
   }
 
   deleteFromOrder(i: number) {
@@ -64,7 +67,7 @@ export class CheckOutComponent implements OnInit, DoCheck {
   }
 
   checkOut() {
-    this.oService.addOrder({ order: this.myOrder, totalprice: this.totalOrderPrice, deliveryfee: this.deliveryFee }).subscribe(
+    this.oService.addOrder({ userEmail: this.userEmail, order: this.myOrder, totalprice: this.totalOrderPrice, deliveryfee: this.deliveryFee, resturant: this.restName }).subscribe(
       (res) => {
         this.router.navigateByUrl('/sent')
       },
