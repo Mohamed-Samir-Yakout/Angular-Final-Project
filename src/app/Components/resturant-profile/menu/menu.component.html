@@ -51,7 +51,7 @@
             <span class="row mb-2">{{i.meal}}</span>
             <small class="itemDesc row">{{i.description}}</small>
             <i class="fas fa-plus-circle" style="color: orangered;">{{i.price | currency:'EGP'}}</i>
-            <button type="button" [disabled]='!localstorageCheck' class="btn btn-outline-danger ml-3 btn-sm" (click)="addToCart(i.meal, i.price)">Add to cart</button>
+            <button type="button"  class="btn btn-outline-danger ml-3 btn-sm" (click)="addToCart(i.meal, i.price)">Add to cart</button>
           </div>
           <div id="itemImg" class="col-md-3 col-sm-4">
             <img src="../../../../assets/Images/itemImg.jpg" alt="" style="max-width: 100%;" class="row">
