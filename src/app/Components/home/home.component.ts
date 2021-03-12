@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy, DoCheck } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -13,27 +13,31 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit,OnDestroy {
+export class HomeComponent implements OnInit,OnDestroy,DoCheck {
   restaurantName: string;
   restaurantsList:Iresturant[];
   restaurantNameList:String[]=[]
   subscription: Subscription;
   isLoading:boolean;
   error:String=null;
-  isAuthnticated:string=localStorage.getItem('authUser');
-  expires:any;
-  private userSub:Subscription;
+  isAuthnticated:boolean;
   userEmail:string='';
   
 
 constructor(private mySharedService:SharedService,private router:Router,private resDatea: ResturantDataService,private authService :AuthnticationService) {
    
-console.log(this.isAuthnticated)
-console.log(this.expires)
+    
 
   }
   ngOnDestroy(): void {
+   
   
+  }
+  ngDoCheck():void{
+    
+
+    this.isAuthnticated= this.authService.islogged();
+
   }
 
   ngOnInit(): void {
@@ -79,7 +83,7 @@ onSubmit(form:NgForm){
       console.log(resData.email)
       this.isLoading=false;
       this.error=null;
-      window.location.reload();
+      // window.location.reload();
     
     },
     err=>{console.log(err)
@@ -103,8 +107,7 @@ onClickLogin(userlogin:NgForm){
     this.isLoading=false;
     this.error=null;
      this.userEmail=resData.email;
-     this.expires=resData.expiresIn
-     window.location.reload();
+    //  window.location.reload();
     
   },
   err=>{console.log(err)
@@ -119,6 +122,5 @@ onClickLogin(userlogin:NgForm){
 logOutForEmail(){
   this.authService.logout();
 
-  window.location.reload();
 }
 }

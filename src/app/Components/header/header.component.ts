@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthnticationService } from 'src/app/Services/authntication.service';
 
@@ -7,15 +7,20 @@ import { AuthnticationService } from 'src/app/Services/authntication.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit,DoCheck {
   language: string;
-  email:string=localStorage.getItem('User');
-  isAuthnticated:string=localStorage.getItem('authUser');
+  email:string;
   isLoading:boolean;
   error:String=null;
   userEmail:string='';
+  isAuthnticated:boolean;
 
   constructor(private authService:AuthnticationService) { }
+  ngDoCheck(): void {
+    this.isAuthnticated= this.authService.islogged();
+    this.email=localStorage.getItem('User');
+    
+  }
 
   ngOnInit(): void {
     this.language =localStorage.getItem('language') || 'en';
@@ -31,7 +36,7 @@ export class HeaderComponent implements OnInit {
   logOutForEmail(){
     this.authService.logout();
   
-    window.location.reload();
+    // window.location.reload();
   }
   onClickLogin(userlogin:NgForm){
     const email=userlogin.value.email;
@@ -42,7 +47,7 @@ export class HeaderComponent implements OnInit {
       this.error=null;
        this.userEmail=resData.email;
 
-       window.location.reload();
+      //  window.location.reload();
       
     },
     err=>{console.log(err)

@@ -2,6 +2,7 @@ import { Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from 
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ResturantDataService } from 'src/app/Services/resturant-data.service';
+import { SharedService } from 'src/app/Services/shared.service';
 import { TastyOffersService } from 'src/app/Services/tasty-offers.service';
 import { Iresturant } from 'src/app/ViewModels/iresturant';
 import { Itasty } from 'src/app/ViewModels/itasty';
@@ -24,9 +25,10 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
   orderOnline: boolean = false;
   hyginCheck: boolean = false;
   promoCheck: boolean = false;
+  restaurantName: string;
 
 
-  constructor(private offers: TastyOffersService, private resDatea: ResturantDataService, private myRouter: Router) {
+  constructor(private offers: TastyOffersService, private resDatea: ResturantDataService, private myRouter: Router,private mySharedService:SharedService) {
 
   }
 
@@ -34,6 +36,7 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
 
   ngOnInit(): void {
     this.OffersList = this.offers.getAllOffers();
+    this.restaurantName='';
 
     this.subscription = this.resDatea.getAllRest().subscribe(
       (res) => {
@@ -43,8 +46,6 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
       (err) => { console.log(err) }
 
     )
-
-    //this.subsList.push(this.subscription)
 
   }
 
@@ -103,5 +104,12 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
     // }
 
   }
+  navigateToRestaurantMatchesSearch():void{
+    this.mySharedService.setValueSearched(this.restaurantName);
+    if(localStorage.getItem("language")==='ar')
+    this.myRouter.navigate(['/DineOut/RestaurantLocation/القاهرة'])
+    if(localStorage.getItem("language")==='en')
+    this.myRouter.navigate(['/DineOut/RestaurantLocation/Cairo'])
+}
 
 }

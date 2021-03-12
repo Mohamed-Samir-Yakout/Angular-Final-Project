@@ -60,7 +60,8 @@ export class DiscoverByCategoryComponent implements OnInit {
         );
       }
       if (sortByRestaurantLocation) {   
-        console.log(sortByRestaurantLocation)
+        // console.log(sortByRestaurantLocation)
+        console.log(this.restaurant)
         this.restaurants
           .getRestaurantByLocation(sortByRestaurantLocation)
           .subscribe(

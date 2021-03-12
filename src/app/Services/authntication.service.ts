@@ -57,10 +57,6 @@ export class AuthnticationService {
       password: password,
       returnSecureToken: true,
     }
-    
-    
-    
-    
     ).pipe(tap(resData=>{
       this.handleAuthntication(resData.email, resData.idToken, resData.localId, +resData.expiresIn);
        

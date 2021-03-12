@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SharedService } from 'src/app/Services/shared.service';
 
 @Component({
   selector: 'app-dine-out',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dine-out.component.css']
 })
 export class DineOutComponent implements OnInit {
+  restaurantName:string;
 
-  constructor() { }
+  constructor(private mySharedService:SharedService,private myRouter: Router) {    
+  }
 
   ngOnInit(): void {
+    this.restaurantName='';
   }
+  navigateToRestaurantMatchesSearch():void{
+    console.log(this.restaurantName)
+    this.mySharedService.setValueSearched(this.restaurantName);
+    if(localStorage.getItem("language")==='ar')
+    this.myRouter.navigate(['/DineOut/RestaurantLocation/القاهرة'])
+    if(localStorage.getItem("language")==='en')
+    this.myRouter.navigate(['/DineOut/RestaurantLocation/Cairo'])
+}
+
+
 
 }
