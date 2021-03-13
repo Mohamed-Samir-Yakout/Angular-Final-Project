@@ -188,7 +188,7 @@
     </div>
     <div  class="btn" (click)="logOutForEmail()"  *ngIf='isAuthnticated'  style="
     color: white;
-    background-color: orangered;
+    background-color: #e5533a;
     
     margin-top: 30px;
     font-size: 20px;
@@ -211,8 +211,8 @@
 
   <!-- search -->
   <div class="row align-items-center">
-    <div class="col-md-3 col-sm-12 col-sm-push-8 section-text"></div>
-    <div class="col-md-4 col-sm-12 col-sm-push-8 section-text">
+    <div class="col-md-3 col-sm-12 col-sm-push-8 section-text "></div>
+    <div class="col-md-4 col-sm-12 col-sm-push-8 section-text ">
       <div class="input-group">
         <input
           type="text"
@@ -229,29 +229,21 @@
       </p>
     </div>
 
-    <div
-    (click)="navigateToRestaurantMatchesSearch()"
-      class="col-md-1 col-sm-12 col-sm-push-8 section-text"
-      style="
-        border-radius: 10px;
-        font-size: 20px;
-        height: 50px;
-        background-color: #e5533a;
-        position: relative;
-      "
-    >
+    
       <button
+      (click)="navigateToRestaurantMatchesSearch()"
       class='btn'
-        style="color: white; position: absolute; top: 18%; margin-left: 25px ;font-size: 15;"
+        style="color: white;  top: 18%; margin-left: 25px ;font-size: 20; text-align: center;background-color: #e5533a;"
         >{{ "Home.searchBtn" | translate }}</button
       >
-    </div>
+ 
     <br/>
-    <ul  *ngIf="restaurantName.length>0" class="list-group list-group-flush" style="width: 40%; border-style: solid; ">
+
+    <!-- <ul  *ngIf="restaurantName.length>0" class="list-group list-group-flush" style="width: 40%; border-style: solid;  ;">
        <li  (click)="goToRestaurant(restaurant)"  class="list-group-item"  *ngFor="let restaurant  of restaurantNameList | appFilter: restaurantName"  >
           {{restaurant}}
         </li>
-      </ul> 
+      </ul>  -->
   </div>
 
   <br />

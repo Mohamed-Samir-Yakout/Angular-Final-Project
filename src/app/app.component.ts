@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -19,6 +19,7 @@ export class AppComponent {
   error:String=null;
   isAuthnticated:boolean;
   userEmail:string='';
+  @ViewChild("parent") private parentRef: ElementRef<HTMLElement>;
   
 
 constructor(private mySharedService:SharedService,private router:Router,private resDatea: ResturantDataService,private authService :AuthnticationService) {
@@ -28,12 +29,26 @@ constructor(private mySharedService:SharedService,private router:Router,private 
   }
   ngDoCheck():void{
     
+    
+    
     this.isAuthnticated= this.authService.islogged();
   }
 
   ngOnInit(): void {
+    
     this.restaurantName='';
+   
+
      
+  }
+  ngAfterViewInit(){
+// if(localStorage.getItem("language")==='ar')
+//     this.parentRef.nativeElement.dir='rtl';
+//     if(localStorage.getItem("language")==='en')
+//     this.parentRef.nativeElement.dir='ltr';
+
+    
+
   }
   navigateToRestaurantMatchesSearch():void{
    
@@ -43,7 +58,7 @@ constructor(private mySharedService:SharedService,private router:Router,private 
     if(localStorage.getItem("language")==='en')
     this.router.navigate(['/DineOut/RestaurantLocation/Cairo'])
 }
-
+  
 onSubmit(form:NgForm){
   const email=form.value.email;
   const  password=form.value.pwd;

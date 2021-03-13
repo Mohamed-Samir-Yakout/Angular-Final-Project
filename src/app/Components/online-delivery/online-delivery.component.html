@@ -90,7 +90,7 @@
                 <h4 class="col-sm-12" style="color: grey;">{{"Delivery.Show result for"|translate}}</h4>
                 <div class="col-md-12 border-bottom mb-3 mt-3 pb-3">
                     <div class="custom-control custom-switch ">
-                        <input #OrderOnline type="checkbox" (change)='orderOnline=!orderOnline' [checked]='orderOnline' class="custom-control-input" id="customSwitch1" value="Online Ordering">
+                        <input #OrderOnline type="checkbox"  (change)='orderOnline=!orderOnline'  [checked]='orderOnline' class="custom-control-input" id="customSwitch1" value="Online Ordering">
                         <label class="custom-control-label" for="customSwitch1">{{"Delivery.Online ordering only"|translate}}<br>
                            <small style="color: green;"><i class="fas fa-check-circle"></i> {{"Delivery.elmenus Order online"|translate}}</small></label>
                       </div>
@@ -98,9 +98,9 @@
 
                 <div class="col-md-12 col-5  border-bottom mb-3 mt-1 pb-3 col-sm-6">
                     <div class="form-check mb-2">
-                        <input  class="form-check-input" (change)='openNow=!openNow' [checked]='openNow'  type="checkbox" value="Open now" id="openCheck">
-                        <label class="form-check-label" for="defaultCheck1">&nbsp;
-                            <small><i class="fas fa-door-open" style="color: grey;"></i></small>	&nbsp;
+                        <input  class="form-check-input "  (change)='openNow=!openNow'  [checked]='openNow'  type="checkbox" value="Open now" id="openCheck">
+                        <label class="form-check-label" for="defaultCheck1" >&nbsp;
+                            <small ><i class="fas fa-door-open" style="color: grey;"></i></small>	&nbsp;
                             <small  style="color: grey;">{{"Delivery.Open now"|translate}}</small>
                         </label>
                       </div>
