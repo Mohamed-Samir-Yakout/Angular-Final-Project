@@ -155,7 +155,7 @@
                 </div>
                 <div class="row" id="TDItems" >
                   <div  class="col-md-4 col-5 items1 mb-2"  *ngFor="let item of filteredRestList, let s = index" [hidden]="s > itemsCount" >
-                    <img src="../../../assets/Images/download2.jpg" alt="" style="max-width: 100%;">
+                    <img  src={{item.img}} alt="" style="max-width: 100%; max-height: 50%;">
                     <div class="col-md-12" >
                         <small class="TDtxt1 mr-5" style="margin-left: 10px;">{{"Delivery.fastfood"|translate}}</small>
                         <small class="ml-4" style="color: green;"><i class="fas fa-check-circle"></i>{{"Delivery.Order online"|translate}}</small>

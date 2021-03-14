@@ -1,19 +1,20 @@
 <section class="glide">
-    <div>
-        <button  (click) ='getRestaurantsByLocation("القاهرة")' class="btn btn-primary" style="float: right;padding-right: 50px;text-align: center;">{{"DineOutModule.SeeAll" |translate}}</button>
+    <div >
+        <button class="btn btn-sm"   (click) ='getRestaurantsByLocation("القاهرة")'  style="float: right;padding-right: 20px; background-color: orangered; color: white;font-weight: bold; font-size: 20px;padding-left: 20px; ">{{"DineOutModule.SeeAll" |translate}}</button>
         <h2>{{"DineOutModule.DiscoverByLocation"|translate}}</h2>
     </div>
    
-    <div class="  row">
+    <div class="row">
    
 
         <div   (click)="navigateToRestaurant(restaurant)"   *ngFor='let restaurant of restaurantsByLocation ' class="card col-lg-2" style="width:25rem; margin-left: 20px;margin-top: 30px;">
-            <img class="card-img-top" src="../../../../../../assets/Images/download2.jpg" alt="Card image cap">
-            <div class="card-body" >
+            <img class="card-img" style="height: 50%;"  src={{restaurant.img}} alt="Card image cap">
+            <div class="card-body"  >
                
-                <h6> Name:{{restaurant.id}}</h6>
-                <div>🗺{{restaurant.Location}}</div>
-                <div>☎️:{{restaurant.hotLine}}</div>
+                <h5 class=" text-center" style="color: grey">{{restaurant.id}}</h5>
+                <h6 class="text-center">Location: {{restaurant.Location}}</h6>
+                <h6 class="text-center">hotLine: {{restaurant.hotLine}}</h6>
+                <h6 class="text-center">Dish: {{restaurant.Dish}}</h6>
 
 
             </div>

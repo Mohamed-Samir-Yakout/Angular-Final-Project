@@ -3,18 +3,19 @@
    <div class="container">
        <h3>Restaurants({{restaurantList.length}})</h3>
 
- <h1 class="row" >
+ <div class="row" >
     
       <div   (click)="navigateToRestaurant(restaurant)" class="card col-lg-3" style="margin-left: 20px; margin-top:40px"   *ngFor ="let restaurant of restaurantList">
-        <img class="card-img-top"
-          src="../../../../../../assets/Images/download2.jpg" alt="">
+        <img class="card-img-top" style="height: 50%;"src={{restaurant.img}} alt="">
         <div class="card-body">
-          <h4>{{restaurant.id}}</h4>
-          <h6> ☎️: {{restaurant.hotLine}}</h6>
-          <h6> 🗺: {{restaurant.Location}}</h6>
+          <h4 class=" text-center" style="color: grey">{{restaurant.id}}</h4>
+          <h6 class="text-center">Location: {{restaurant.Location}}</h6>
+          <h6 class="text-center">hotLine: {{restaurant.hotLine}}</h6>
+          <h6 class="text-center">Dish: {{restaurant.Dish}}</h6>
+          
 
         </div>
       </div>
    
-  </h1>
+    </div>
 </div>

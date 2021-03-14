@@ -27,6 +27,7 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
 import { CheckOutComponent } from './Components/check-out/check-out.component';
 import { ThankYouComponent } from './Components/thank-you/thank-you.component';
 
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'./assets/i18n/','.json');
 }
