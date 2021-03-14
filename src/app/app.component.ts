@@ -42,10 +42,10 @@ constructor(private mySharedService:SharedService,private router:Router,private 
      
   }
   ngAfterViewInit(){
-// if(localStorage.getItem("language")==='ar')
-//     this.parentRef.nativeElement.dir='rtl';
-//     if(localStorage.getItem("language")==='en')
-//     this.parentRef.nativeElement.dir='ltr';
+if(localStorage.getItem("language")==='ar')
+    this.parentRef.nativeElement.dir='rtl';
+    if(localStorage.getItem("language")==='en')
+    this.parentRef.nativeElement.dir='ltr';
 
     
 

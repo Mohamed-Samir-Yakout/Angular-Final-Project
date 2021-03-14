@@ -79,6 +79,29 @@
   "Deliver":"توصيل",
   "cairo":"القاهره"
 
+ },
+ "Restaurant":{
+  "ORDER ONLINE":" اطلب اونلاين",
+  "Fast Food":"اكلات سريعه",
+  "Cairo ":"القاهره",
+  "Menu":"المنيو",
+  "About":"عن المطعم",
+  "Branches":"فروع",
+  "Reviews":"مراجعات",
+  "Hygiene Checked":"فحص النظافة",
+  "Menu Only Available From 08:00 AM To 04:00 AM":"تتوفر القائمة فقط من الساعة 08:00 صباحًا إلى الساعة 04:00 صباحًا",
+  "View Scanned menu":"عرض المنيو المصور",
+  "Top Dishes":"أفضل الأطباق",
+  "Bundle meals":"وجبات الباقة",
+  "Breakfast":"وجبة افطار",
+  "Delivers To":"توصيل الي ",
+  "Cairo, Egypt":"القاهرة، مصر",
+  "Change Address":"تغيير العنوان",
+  "Continue To Checkout":"الاستمرار",
+  "Add to cart":"أضف إلى السلة"
+
+
+
  }
 
 

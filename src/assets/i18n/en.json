@@ -83,5 +83,28 @@
   "Deliver":"Deliver",
   "cairo":"cairo"
 
- }
+ },
+ "Restaurant":{
+    "ORDER ONLINE":"ORDER ONLINE",
+    "Fast Food":"Fast Food",
+    "Cairo ":"Cairo",
+    "Menu":"Menu",
+    "About":"About",
+    "Branches":"Branches",
+    "Reviews":"Reviews",
+    "Hygiene Checked":"Hygiene Checked",
+    "Menu Only Available From 08:00 AM To 04:00 AM":"Menu Only Available From 08:00 AM To 04:00 AM",
+    "View Scanned menu": "View Scanned menu",
+    "Top Dishes":"Top Dishes",
+    "Bundle meals":"Bundle meals",
+    "Breakfast":"Breakfast",
+    "Delivers To":"Delivers To",
+    "Cairo, Egypt":"Cairo, Egypt",
+    "Change Address":"Change Address",
+    "Continue To Checkout":"Continue To Checkout",
+    "Add to cart":"Add to cart"
+  
+  
+  
+   }
 }

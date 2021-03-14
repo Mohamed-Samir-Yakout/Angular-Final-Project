@@ -22,6 +22,7 @@ export class ResturantProfileComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe(
       (params) => {
         let restID = params.get('rid')
+        console.log(restID)
         this.getResById(restID)
       }
     )

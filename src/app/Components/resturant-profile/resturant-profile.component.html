@@ -9,13 +9,13 @@
     <section class="row border-bottom" id="header">
         <div class="col-md-2 col-sm-6 col-sm-1 ml-4" id="headerLogo" > 
              <img [src]="resturant.img" id="logo" alt=""><br>
-             <span id="status" class="d-none">Opens in 12 hours</span>
+             <span id="status" class="d-none">{{"Restaurant.Opens in 12 hours"|translate}}</span>
         </div>
 
         <div class="col-md-6 col-sm-4" >
 
             <h3 class="mt-4">{{resturant.id}}<small class="text-muted" style="font-size: x-small;">&nbsp;
-              <i class="fas fa-circle"></i>&nbsp; ORDER ONLINE
+              <i class="fas fa-circle"></i>&nbsp; {{"Restaurant.ORDER ONLINE"|translate}}
             </small></h3>
 
             <small class="text-muted">Fast Food</small>&nbsp;
@@ -53,10 +53,10 @@
         <section id="nav" class="row justify-content-around mb-3 mt-sm-3">
             <nav class="ml-4 col-md-5 mt-2 border-none">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-menu" role="tab" aria-controls="nav-home" (click)="showMenu()" aria-selected="true">Menu</a>
-                  <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-profile" (click)="showAbout()" aria-selected="false">About</a>
-                  <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-Branches" role="tab" aria-controls="nav-contact" (click)="showBranches()"  aria-selected="false">Branchs</a>
-                  <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-contact" (click)="showReviews()"  aria-selected="false">Reviews</a>
+                  <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-menu" role="tab" aria-controls="nav-home" (click)="showMenu()" aria-selected="true">{{"Restaurant.Menu"|translate}}</a>
+                  <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-profile" (click)="showAbout()" aria-selected="false">{{"Restaurant.About"|translate}}</a>
+                  <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-Branches" role="tab" aria-controls="nav-contact" (click)="showBranches()"  aria-selected="false">{{"Restaurant.Branches"|translate}}</a>
+                  <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-contact" (click)="showReviews()"  aria-selected="false">{{"Restaurant.Reviews"|translate}}</a>
                 </div>
            </nav>
  
@@ -64,7 +64,7 @@
  
                  <span class="col-md-s navtxt" style="color: green;">
                      <i class="fas fa-utensils"></i>&nbsp;
-                     Hygiene Checked
+                     {{"Restaurant.Hygiene Checked"|translate}}
                  </span>
                  <span class="col-md-2 navtxt">
                      <i class="fas fa-motorcycle"></i>&nbsp; 
@@ -87,11 +87,11 @@
             <section id="scannedmenu" class="row justify-content-around mb-2">
  
                 <div class="col-md-5 col-sm-5 ml-4 ">
-                   <span>Menu Only Available From 08:00 AM To 04:00 AM</span>
+                   <span>{{"Restaurant.Menu Only Available From 08:00 AM To 04:00 AM"|translate}}</span>
                 </div>
  
                 <div class="col-md-5 col-sm-5 pl-5">
-                   <a  style="color: orangered; text-decoration: underline;">View Scanned menu&gt;</a>
+                   <a  style="color: orangered; text-decoration: underline;">{{"Restaurant.View Scanned menu"|translate}}&gt;</a>
                 </div>
  
             </section>
@@ -99,12 +99,12 @@
         <section class="row ">
             
            
-             <app-about [hidden]='!aboutRest'></app-about>
-             <app-menu [hidden]='!restMenu' [restName]='resturant.id'></app-menu>
+             <app-about  [hidden]='!aboutRest'></app-about>
+             <app-menu  [hidden]='!restMenu' [restName]='resturant.id'></app-menu>
 
-             <app-branches [hidden]='!restBranches'></app-branches>
+             <app-branches  [hidden]='!restBranches'></app-branches>
 
-             <app-reviews [restID]='resturant.id' [hidden]='!restReviews'></app-reviews>
+             <app-reviews  [restID]='resturant.id' [hidden]='!restReviews'></app-reviews>
             
 
         </section>
