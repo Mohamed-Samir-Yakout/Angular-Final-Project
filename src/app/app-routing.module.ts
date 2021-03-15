@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
-import { AccountSettingsComponent } from './Components/account-settings/account-settings.component';
 import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
 import { PrivacyComponent } from './Components/privacy/privacy.component';
 import { TermsComponent } from './Components/terms/terms.component';

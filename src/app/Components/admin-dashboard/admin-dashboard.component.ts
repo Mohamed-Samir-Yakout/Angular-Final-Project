@@ -10,6 +10,7 @@ export class AdminDashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.location.href = 'http://localhost:4500'
   }
 
 }
