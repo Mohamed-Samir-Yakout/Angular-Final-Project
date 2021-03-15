@@ -65,9 +65,9 @@ constructor(private mySharedService:SharedService,private router:Router,private 
   navigateToRestaurantMatchesSearch():void{
    
     this.mySharedService.setValueSearched(this.restaurantName);
-    if(localStorage.getItem("language")==='ar')
-    this.router.navigate(['/DineOut/RestaurantLocation/القاهرة'])
-    if(localStorage.getItem("language")==='en')
+    // if(localStorage.getItem("language")==='ar')
+    // this.router.navigate(['/DineOut/RestaurantLocation/القاهره'])
+    // if(localStorage.getItem("language")==='en')
     this.router.navigate(['/DineOut/RestaurantLocation/Cairo'])
 }
 goToRestaurant(restaurant:String): void {

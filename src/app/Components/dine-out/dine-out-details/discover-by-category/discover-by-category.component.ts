@@ -59,18 +59,25 @@ export class DiscoverByCategoryComponent implements OnInit {
         );
       }
       if (sortByRestaurantLocation) {   
-        // console.log(sortByRestaurantLocation)
+        console.log(sortByRestaurantLocation)
         console.log(this.restaurant)
         this.restaurants
           .getRestaurantByLocation(sortByRestaurantLocation)
           .subscribe(
             (response) => {  
               console.log(response)
-              if(this.restaurant.length>0){ 
+              if(this.restaurant.length>0 ){ 
                 this.restaurantList=response.filter((rest)=>{
+                  if(localStorage.getItem("language")=='en'){
                   return (
                     rest.name.toLowerCase().includes(this.restaurant)
+                    
                     )
+                  }
+                  else{       return (
+                    rest.arName.toLowerCase().includes(this.restaurant)
+                    
+                    )}
                 });
 
               }

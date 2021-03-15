@@ -109,9 +109,9 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
   }
   navigateToRestaurantMatchesSearch():void{
     this.mySharedService.setValueSearched(this.restaurantName);
-    if(localStorage.getItem("language")==='ar')
-    this.myRouter.navigate(['/DineOut/RestaurantLocation/القاهرة'])
-    if(localStorage.getItem("language")==='en')
+    // if(localStorage.getItem("language")==='ar')
+    // this.myRouter.navigate(['/DineOut/RestaurantLocation/القاهرة'])
+    // if(localStorage.getItem("language")==='en')
     this.myRouter.navigate(['/DineOut/RestaurantLocation/Cairo'])
 }
 

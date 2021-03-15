@@ -82,9 +82,20 @@
     </ul>
 
     <select style="margin-left: 20px;" id="Language" (change)="changeLanguage($event.target.value)">
-      <option value="ar" [selected]="language == 'ar'">عربي</option>
+       <option value="ar" [selected]="language == 'ar'">عربي</option>
       <option value="en" [selected]="language == 'en'">English</option>
     </select>
+
+    <!-- <button  *ngIf="language==='ar' " (click)="changeLanguage('ar')"     style="color: white;
+    background-color: orangered;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;">English</button>
+    <button  (click)="changeLanguage('en')" class="btn"  *ngIf="language==='en'"  (click)="changeLanguage(en)"     style="color: white;
+    background-color: orangered;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;">العربيه</button> -->
     <div style="margin-left: 20px; color: grey;">{{email}}</div>
     <div  class="btn" (click)="logOutForEmail()"  *ngIf='isAuthnticated'  style="
     color: white;

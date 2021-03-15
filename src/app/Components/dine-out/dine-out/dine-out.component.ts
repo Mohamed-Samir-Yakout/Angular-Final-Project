@@ -19,9 +19,7 @@ export class DineOutComponent implements OnInit {
   navigateToRestaurantMatchesSearch():void{
     console.log(this.restaurantName)
     this.mySharedService.setValueSearched(this.restaurantName);
-    if(localStorage.getItem("language")==='ar')
-    this.myRouter.navigate(['/DineOut/RestaurantLocation/القاهرة'])
-    if(localStorage.getItem("language")==='en')
+  
     this.myRouter.navigate(['/DineOut/RestaurantLocation/Cairo'])
 }
 
