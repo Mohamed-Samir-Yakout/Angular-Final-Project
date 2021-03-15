@@ -10,9 +10,8 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
 })
 export class DiscoverByCategoryComponent implements OnInit {
   restaurantList: Iresturant[] = [];
-  restaurant:any;
-  
-
+  restaurant:any;  
+  lang:string=localStorage.getItem("language")
   constructor(
     private activatedRouter: ActivatedRoute,
     private restaurants: ResturantDataService,
@@ -41,7 +40,7 @@ export class DiscoverByCategoryComponent implements OnInit {
         this.restaurants.getRestaurantsByMoods(sortByRestaurantMood).subscribe(
           (response) => {
             this.restaurantList = response;
-            console.log(this.restaurantList);
+            
           },
           (err) => {
             console.log(err);
@@ -70,7 +69,7 @@ export class DiscoverByCategoryComponent implements OnInit {
               if(this.restaurant.length>0){ 
                 this.restaurantList=response.filter((rest)=>{
                   return (
-                    rest.id.toLowerCase().includes(this.restaurant)
+                    rest.name.toLowerCase().includes(this.restaurant)
                     )
                 });
 

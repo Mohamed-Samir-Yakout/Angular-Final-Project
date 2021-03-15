@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ResturantDataService } from 'src/app/Services/resturant-data.service';
 import { Iresturant } from 'src/app/ViewModels/iresturant';
 
@@ -10,13 +10,14 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
 })
 export class ResturantProfileComponent implements OnInit {
   @Input() restName: string;
-  resturant: Iresturant = { id: '', Location: '', hotLine: 0, Branches: 0, Mood: "", img: "", mealImg: '' }
+  resturant: Iresturant = { name: '', Location: '', hotLine: 0, Branches: 0, Mood: 0, img: "", mealImg: '' ,id:0}
   aboutRest: boolean = false;
   restMenu: boolean = true;
   restBranches: boolean = false;
   restReviews: boolean = false;
+  lang:string=localStorage.getItem("language")
   constructor(private restServ: ResturantDataService,
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(
@@ -36,6 +37,7 @@ export class ResturantProfileComponent implements OnInit {
       },
       (err) => {
         console.log(err)
+        // this.router.navigate(['/DineOut/RestaurantMood',moodDetails]);
       }
     )
   }

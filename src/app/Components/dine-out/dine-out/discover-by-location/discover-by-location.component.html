@@ -7,14 +7,16 @@
     <div class="row">
    
 
-        <div   (click)="navigateToRestaurant(restaurant)"   *ngFor='let restaurant of restaurantsByLocation ' class="card col-lg-2" style="width:25rem; margin-left: 20px;margin-top: 30px;">
+        <div   (click)="navigateToRestaurant(restaurant)"     *ngFor='let restaurant of restaurantsByLocation ' class="card col-lg-2" style="width:25rem; margin-left: 20px;margin-top: 30px;">
             <img class="card-img" style="height: 50%;"  src={{restaurant.img}} alt="Card image cap">
-            <div class="card-body"  >
+            <div class="card-body" >
                
-                <h5 class=" text-center" style="color: grey">{{restaurant.id}}</h5>
-                <h6 class="text-center">Location: {{restaurant.Location}}</h6>
+                <h5  *ngIf="lang==='en'" class=" text-center" style="color: grey">{{restaurant.name}}</h5>
+                <h5  *ngIf="lang==='ar'" class=" text-center" style="color: grey">{{restaurant.arName}}</h5>
+                <h6  *ngIf="lang==='en'" class="text-center">Location: {{restaurant.Location}}</h6>
+                <h6  *ngIf="lang==='ar'" class="text-center">Location: {{restaurant.arLocation}}</h6>
                 <h6 class="text-center">hotLine: {{restaurant.hotLine}}</h6>
-                <h6 class="text-center">Dish: {{restaurant.Dish}}</h6>
+                <!-- <h6 class="text-center">Dish: {{dish.name}}</h6> -->
 
 
             </div>

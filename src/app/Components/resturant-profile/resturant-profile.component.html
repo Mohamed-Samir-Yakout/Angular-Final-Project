@@ -14,9 +14,12 @@
 
         <div class="col-md-6 col-sm-4" >
 
-            <h3 class="mt-4">{{resturant.id}}<small class="text-muted" style="font-size: x-small;">&nbsp;
+            <h3  *ngIf="lang==='en'" class="mt-4">{{resturant.name}}<small class="text-muted" style="font-size: x-small;">&nbsp;
               <i class="fas fa-circle"></i>&nbsp; {{"Restaurant.ORDER ONLINE"|translate}}
             </small></h3>
+            <h3  *ngIf="lang==='ar'" class="mt-4">{{resturant.arName}}<small class="text-muted" style="font-size: x-small;">&nbsp;
+                <i class="fas fa-circle"></i>&nbsp; {{"Restaurant.ORDER ONLINE"|translate}}
+              </small></h3>
 
             <small class="text-muted">Fast Food</small>&nbsp;
             <span class="fa fa-star checked star"></span>

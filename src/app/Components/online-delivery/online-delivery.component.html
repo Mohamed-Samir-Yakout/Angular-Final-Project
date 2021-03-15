@@ -161,7 +161,8 @@
                         <small class="ml-4" style="color: green;"><i class="fas fa-check-circle"></i>{{"Delivery.Order online"|translate}}</small>
                     </div>
                     <div  class="col-md-12">
-                        <a  [routerLink]="'/resturants/'+item.id"><span>{{item.id}}</span></a><br>
+                        <a  [routerLink]="'/resturants/'+item.id"><span  *ngIf="lang==='en'">{{item.name}}</span></a><br>
+                        <a  [routerLink]="'/resturants/'+item.id"><span  *ngIf="lang==='ar'">{{item.arName}}</span></a><br>
                         <span class="fa fa-star checkedStar"></span>
                         <span class="fa fa-star checkedStar"></span>
                         <span class="fa fa-star checkedStar"></span>

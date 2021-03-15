@@ -106,5 +106,12 @@
   
   
   
+   },
+   "Category":{
+
+    "Restaurants":"Restaurants",
+    "hotLine":"hotLine",
+    "Location":"Location"
+  
    }
 }

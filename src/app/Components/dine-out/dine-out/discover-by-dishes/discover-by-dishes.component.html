@@ -6,9 +6,10 @@
     </div>
     <div class="section-body glider-contain" style="margin-top:20px">
 
-        <figure class="figure "  (click)="getRestaurantByDishes(dish.name) "  *ngFor ="let dish of dishes">
+        <figure class="figure "  (click)="getRestaurantByDishes(dish.id) "  *ngFor ="let dish of dishes">
             <img class="img-fluid rounded" src="../../../../../../assets/Images/download2.jpg" alt="image">
-            <figcaption class="figure-caption" style="text-align: center;">{{dish.name}}</figcaption>
+            <figcaption  *ngIf="lang=='en'" class="figure-caption" style="text-align: center;">{{dish.name}}</figcaption>
+            <figcaption  *ngIf="lang=='ar'" class="figure-caption" style="text-align: center;">{{dish.arName}}</figcaption>
         </figure>
     </div>
 

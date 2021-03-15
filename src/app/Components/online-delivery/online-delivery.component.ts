@@ -26,6 +26,7 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
   hyginCheck: boolean = false;
   promoCheck: boolean = false;
   restaurantName: string;
+  lang:string=localStorage.getItem("language")
 
 
   constructor(private offers: TastyOffersService, private resDatea: ResturantDataService, private myRouter: Router,private mySharedService:SharedService) {

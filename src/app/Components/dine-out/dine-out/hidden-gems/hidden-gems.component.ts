@@ -17,17 +17,17 @@ export class HiddenGemsComponent implements OnInit {
 
   ngOnInit(): void {
     this.lang=localStorage.getItem('language');
-    this.hiddenGemsRestaurantsService.getHiddenGemsRestaurants().subscribe(
-        (response)=>{
-         this.hiddenGemsRestaurants=response;
-         console.log(response)
-        },
-        (error)=>{
-          console.log(error)
-        }
+    // this.hiddenGemsRestaurantsService.getHiddenGemsRestaurants().subscribe(
+    //     (response)=>{
+    //      this.hiddenGemsRestaurants=response;
+    //      console.log(response)
+    //     },
+    //     (error)=>{
+    //       console.log(error)
+    //     }
 
 
-    )
+    // )
 
      
 

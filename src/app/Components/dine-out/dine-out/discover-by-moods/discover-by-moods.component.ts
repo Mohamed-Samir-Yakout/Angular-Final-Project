@@ -11,6 +11,7 @@ import { Imood } from 'src/app/ViewModels/imood';
 })
 export class DiscoverByMoodsComponent implements OnInit {
   moods: Imood[]=[];
+  lang:string=localStorage.getItem("language");
 
   constructor(private router:Router,private avilableMoods:ResturantDataService) { }
 

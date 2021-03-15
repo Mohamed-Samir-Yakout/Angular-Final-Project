@@ -21,24 +21,12 @@
             <div class="footer-menu footer-menu--1">
               <h6 class="footer-widget-title">Cities</h6>
               <ul>
-                <li>
-                  <a >Alexandria</a>
-
-                </li>
+                
                 <li>
                   <a>Cairo</a>
 
                 </li>
-                <li>
-                  <a>Elgouna</a>
-
-                </li>
-                <li>
-                  <a>Giza</a>
-                </li>
-                <li>
-                  <a>Sharm EL-Sheikh</a>
-                </li>
+                
               </ul>
             </div>
             <!-- end /.footer-menu -->
@@ -82,32 +70,16 @@
         </div>
         <!-- end /.col-lg-3 -->
 
-        <div class="col-md-3 col-sm-4">
+        <div class="col-md-3 col-sm-4"  >
           <div class="footer-widget">
             <div class="footer-menu">
               <h6 class="footer-widget-title">Dishes</h6>
               <ul>
-                <li>
-                  <a >Burger</a>
+                <li  *ngFor="let dish of dishesList">
+                  <a  class="btn" (click)="navigateToRestaurantsWithSameDishes(dish)"  *ngIf="lang==='en'">{{dish.name}}</a>
+                  <a   class="btn"   (click)="navigateToRestaurantsWithSameDishes(dish)"  *ngIf="lang==='ar'">{{dish.arName}}</a>
                 </li>
-                <li>
-                  <a >Feteer</a>
-                </li>
-                <li>
-                  <a >Fried Chicken</a>
-                </li>
-                <li>
-                  <a >Healthy Food</a>
-                </li>
-                <li>
-                  <a >Pasta</a>
-                </li>
-                <li>
-                  <a >Seafood</a>
-                </li>
-                <li>
-                  <a >Shawerma</a>
-                </li>
+    
               </ul>
             </div>
             <!-- end /.footer-menu -->

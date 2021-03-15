@@ -99,8 +99,12 @@
   "Change Address":"تغيير العنوان",
   "Continue To Checkout":"الاستمرار",
   "Add to cart":"أضف إلى السلة"
+ },
+ "Category":{
 
-
+  "Restaurants":"المطاعم",
+  "hotLine":"الخط الساخن",
+  "Location":"الموقع"
 
  }
 

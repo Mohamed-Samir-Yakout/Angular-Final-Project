@@ -11,6 +11,7 @@ import { Idish } from 'src/app/ViewModels/idishe';
 })
 export class DiscoverByDishesComponent implements OnInit {
   dishes:Idish[]=[];
+  lang:string=localStorage.getItem("language")
   constructor(private router: Router,private allDishes:ResturantDataService) { }
 
   ngOnInit(): void {

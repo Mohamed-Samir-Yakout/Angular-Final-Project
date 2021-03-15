@@ -46,7 +46,7 @@ constructor(private mySharedService:SharedService,private router:Router,private 
       (res) => {
       this.restaurantsList=res;
       this.restaurantsList.forEach((val)=> {
-        this.restaurantNameList.push(val.id);
+        this.restaurantNameList.push(val.name);
       });
 
        
