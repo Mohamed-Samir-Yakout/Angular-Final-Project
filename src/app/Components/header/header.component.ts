@@ -8,7 +8,7 @@ import { AuthnticationService } from 'src/app/Services/authntication.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit,DoCheck {
-  language: string=localStorage.getItem('language') || 'en';;
+  language: string;
   email:string;
   isLoading:boolean;
   error:String=null;
@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit,DoCheck {
   }
 
   ngOnInit(): void {
-    // this.language =
+    this.language =localStorage.getItem('language') || 'en';
   
   }
 

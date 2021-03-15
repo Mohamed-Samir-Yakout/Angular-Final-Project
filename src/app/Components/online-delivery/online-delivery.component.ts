@@ -26,10 +26,10 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
   hyginCheck: boolean = false;
   promoCheck: boolean = false;
   restaurantName: string;
-  lang:string=localStorage.getItem("language")
+  lang: string = localStorage.getItem("language")
 
 
-  constructor(private offers: TastyOffersService, private resDatea: ResturantDataService, private myRouter: Router,private mySharedService:SharedService) {
+  constructor(private offers: TastyOffersService, private resDatea: ResturantDataService, private myRouter: Router, private mySharedService: SharedService) {
 
   }
 
@@ -37,7 +37,7 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
 
   ngOnInit(): void {
     this.OffersList = this.offers.getAllOffers();
-    this.restaurantName='';
+    this.restaurantName = '';
 
     this.subscription = this.resDatea.getAllRest().subscribe(
       (res) => {
@@ -83,7 +83,7 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
     this.promoCheck = false;
   }
 
-  restProfile(rid: string) {
+  restProfile(rid: number) {
     this.myRouter.navigate(['/resturants', rid])
     return this.resDatea.getRestById(rid).subscribe(
       (res) => {
@@ -107,12 +107,13 @@ export class OnlineDeliveryComponent implements OnInit, OnChanges, OnDestroy, Do
     // }
 
   }
-  navigateToRestaurantMatchesSearch():void{
+  navigateToRestaurantMatchesSearch(): void {
     this.mySharedService.setValueSearched(this.restaurantName);
     // if(localStorage.getItem("language")==='ar')
     // this.myRouter.navigate(['/DineOut/RestaurantLocation/القاهرة'])
     // if(localStorage.getItem("language")==='en')
     this.myRouter.navigate(['/DineOut/RestaurantLocation/Cairo'])
 }
+
 
 }

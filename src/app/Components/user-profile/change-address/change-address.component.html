@@ -1,9 +1,9 @@
 <div class="container " id="newAddress">
     <div class="row justify-content-center">
-      <form>
+      <form (ngSubmit)="saveAddress()" [formGroup]="addresForm">
         <div class="form-group mt-3 row">
           <label for="name" id="nameLabel"><small class="text-muted">name</small></label>
-          <input type="text" class="form-control" id="name"  value="username">
+          <input type="text" class="form-control" id="name" name="name" formControlName="name" placeholder="username">
           
         </div>
         <h5 class="row">Add New Address Details</h5>
@@ -16,27 +16,27 @@
        </div>
         <div class="form-group row mt-1">
           <label for="addressInfo"><small class="text-muted">Address Info</small></label>
-          <input type="text" class="form-control" id="AdressInfo">
+          <input type="text" class="form-control" formControlName="addressInfo" id="AdressInfo">
         </div>
 
         <div class=" row mt-1">
           <div class="form-group col-3  mt-1">
-            <label for="bulding"><small class="text-muted">Bulding No.</small></label>
-            <input type="text" class="form-control" id="bulding" placeholder="e.g. 12">
+            <label for="bulding"><small class="text-muted">Building No.</small></label>
+            <input type="text" class="form-control" formControlName="buildingNO" id="bulding" placeholder="e.g. 12">
           </div>
           <div class="form-group col-3 mt-1">
             <label for="floor"><small class="text-muted">Floor No.</small></label>
-            <input type="text" class="form-control" id="floor" placeholder="e.g. 4">
+            <input type="text" class="form-control" id="floor" formControlName="floorNo" placeholder="e.g. 4">
           </div>
           <div class="form-group col-3 mt-1">
             <label for="apartment"><small class="text-muted">Apartment No.</small></label>
-            <input type="text" class="form-control" id="apartment" placeholder="e.g. 14">
+            <input type="text" class="form-control" id="apartment" formControlName="apartmentNo" placeholder="e.g. 14">
           </div>
         </div>
 
         <div class="form-group row  mt-1">
           <label for="mobile"><small class="text-muted">Mobile Number</small></label>
-          <input type="text" class="form-control" id="mobile">
+          <input type="text" class="form-control" formControlName="mobile" id="mobile">
         </div>
         <div class="row">
           <div class="custom-control custom-switch ">
@@ -46,8 +46,8 @@
         </div>
 
         <div class="row mt-3 mb-3">
-          <button type="button" class="btn mr-3" id="savebtn">Save Address</button>
-          <button type="button" class="btn " id="cancelbtn">Cancel</button>
+          <button type="submit" class="btn mr-3"  [disabled]='!addresForm.valid' id="savebtn">Save Address</button>
+          <button type="button" class="btn " (click)='cancel()' id="cancelbtn">Cancel</button>
 
         </div>
 

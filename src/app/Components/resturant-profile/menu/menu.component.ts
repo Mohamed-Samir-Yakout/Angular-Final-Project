@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit, DoCheck {
 
   constructor(private restData: ResturantDataService, private shService: SharedService, private router: Router) { }
   ngDoCheck(): void {
-    console.log(this.order)
+
     this.shService.setOrderList(this.order)
   }
 

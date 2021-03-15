@@ -6,12 +6,12 @@
                 
              <div class="form-row">  
                     <div class="form-group col-md-12">
-                        <label for="inputEmail4">Phone</label>
+                        <label for="phoneNumber">Phone</label>
                         <input type="number" class="form-control" pattern="(^[1])([0-9]{9})" name="clientPhone" [(ngModel)]='clientPhone'  id="phoneNumber" placeholder="mobile number" required>
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="inputEmail4">Address</label>
-                        <input [disabled]='registeredAddress' name="dleiveryaddress" [(ngModel)]='deliveryAddress' type="text" class="form-control" id="inputEmail4" placeholder="123 st, Cairo">
+                        <label for="deliveryaddress">Address</label>
+                        <input [disabled]='registeredAddress' name="dleiveryaddress" [(ngModel)]='deliveryAddress' type="text" class="form-control" id="deliveryaddress" placeholder="123 st, Cairo">
                     </div>
                     
                     <!-- <div class="form-row col-md-12">
@@ -70,21 +70,21 @@
                     </div>
                     <div class="form-row col-md-12 border-bottom pb-3">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">Name on card</label>
-                            <input [disabled]='payCash' type="text" class="form-control" id="inputEmail4">
+                            <label for="nameonCard">Name on card</label>
+                            <input [disabled]='payCash' type="text" class="form-control" id="nameonCard">
                             <small id="emailHelp" class="form-text text-muted">Full Name As Displayed On Card</small>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputPassword4">Card Number</label>
-                            <input [disabled]='payCash' type="text" class="form-control" id="inputPassword4">
+                            <label for="cardNumber">Card Number</label>
+                            <input [disabled]='payCash' type="text" class="form-control" id="cardNumber">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="inputPassword4">Expiration</label>
-                            <input [disabled]='payCash' type="text" class="form-control" id="inputPassword4">
+                            <label for="expiration">Expiration</label>
+                            <input [disabled]='payCash' type="text" class="form-control" id="expiration">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="inputPassword4">CVV</label>
-                            <input [disabled]='payCash' type="text" class="form-control" id="inputPassword4">
+                            <label for="cvv">CVV</label>
+                            <input [disabled]='payCash' type="text" class="form-control" id="cvv">
                         </div>
                     </div>
 

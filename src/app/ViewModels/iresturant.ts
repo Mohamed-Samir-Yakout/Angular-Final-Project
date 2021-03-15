@@ -1,7 +1,7 @@
 export interface Iresturant {
     id: number,
-    name:string,
-    arName:string
+    name: string,
+    arName?:string
     Location: string,
     hotLine: number,
     Branches: number,
