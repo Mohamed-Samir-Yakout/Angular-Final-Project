@@ -9,8 +9,8 @@ import { UserService } from 'src/app/Services/user.service';
 })
 export class UserProfileComponent implements OnInit {
   changePass: boolean = false
-  changeEmail: boolean = true
-  chandeAddress: boolean = false
+  changeEmail: boolean = false
+  chandeAddress: boolean = true
 
 
   constructor(private userData: UserService) {

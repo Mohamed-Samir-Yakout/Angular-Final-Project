@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { OrdersService } from 'src/app/Services/orders.service';
 import { SharedService } from 'src/app/Services/shared.service';
+import { UserService } from 'src/app/Services/user.service';
 import { Iorder } from 'src/app/ViewModels/iorder';
 
 @Component({
@@ -27,7 +28,8 @@ export class CheckOutComponent implements OnInit, DoCheck {
   deliveryAddress: string
 
 
-  constructor(fb: FormBuilder, private shService: SharedService, private oService: OrdersService, private router: Router) {
+  constructor(fb: FormBuilder, private shService: SharedService, private uSerice: UserService,
+    private oService: OrdersService, private router: Router) {
     this.paymentMethod = fb.group({
       method: ["Credit", Validators.required]
     })
@@ -57,6 +59,7 @@ export class CheckOutComponent implements OnInit, DoCheck {
     this.myOrder = this.shService.getOrderList();
     this.restName = this.shService.getResturantName();
     this.userEmail = localStorage.getItem('User');
+    this
   }
 
   deleteFromOrder(i: number) {

@@ -7,7 +7,7 @@ export interface IcompletedOrder {
     totalprice: number,
     resturant: string,
     clientMobile?: number,
-    deliveryAddres?: string,
+    deliveryAddres: string,
     paymentMethod?: string
 
 }
