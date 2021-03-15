@@ -70,7 +70,7 @@ export class CheckOutComponent implements OnInit, DoCheck {
 
   checkOut() {
     if (this.registeredAddress) {
-      this.deliveryAddress = 'registerd address'
+      this.deliveryAddress = 'Nasr City, Cairo'
     }
     this.oService.addOrder({ userEmail: this.userEmail, order: this.myOrder, totalprice: this.totalOrderPrice, deliveryfee: this.deliveryFee, resturant: this.restName, paymentMethod: this.paymentMethod.value, deliveryAddres: this.deliveryAddress, clientMobile: this.clientPhone }).subscribe(
       (res) => {
