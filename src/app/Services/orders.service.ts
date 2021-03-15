@@ -22,4 +22,9 @@ export class OrdersService {
 
     return this.http.post<any>(`${environment.english_Api_URL}/orders`, order, HttpOptions)
   }
+
+  getOrdersByUserEmail(email: string): Observable<IcompletedOrder[]> {
+    return this.http.get<IcompletedOrder[]>(`${environment.english_Api_URL}/orders?userEmail=${email}`)
+  }
+
 }

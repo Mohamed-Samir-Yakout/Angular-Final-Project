@@ -23,6 +23,8 @@ export class CheckOutComponent implements OnInit, DoCheck {
   myOrder: Iorder[] = []
   restName: string;
   userEmail: string;
+  clientPhone: number;
+  deliveryAddress: string
 
 
   constructor(fb: FormBuilder, private shService: SharedService, private oService: OrdersService, private router: Router) {
@@ -67,7 +69,10 @@ export class CheckOutComponent implements OnInit, DoCheck {
   }
 
   checkOut() {
-    this.oService.addOrder({ userEmail: this.userEmail, order: this.myOrder, totalprice: this.totalOrderPrice, deliveryfee: this.deliveryFee, resturant: this.restName }).subscribe(
+    if (this.registeredAddress) {
+      this.deliveryAddress = 'registerd address'
+    }
+    this.oService.addOrder({ userEmail: this.userEmail, order: this.myOrder, totalprice: this.totalOrderPrice, deliveryfee: this.deliveryFee, resturant: this.restName, paymentMethod: this.paymentMethod.value, deliveryAddres: this.deliveryAddress, clientMobile: this.clientPhone }).subscribe(
       (res) => {
         this.router.navigateByUrl('/sent')
       },

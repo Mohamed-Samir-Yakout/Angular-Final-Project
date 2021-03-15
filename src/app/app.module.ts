@@ -20,16 +20,17 @@ import { SendGiftComponent } from './Components/send-gift/send-gift.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SearchPipe } from './Pipes/search-pipe.pipe';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { CheckOutComponent } from './Components/check-out/check-out.component';
 import { ThankYouComponent } from './Components/thank-you/thank-you.component';
+import { UserOrderComponent } from './Components/user-order/user-order.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http,'./assets/i18n/','.json');
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 
@@ -56,28 +57,29 @@ export function HttpLoaderFactory(http: HttpClient) {
     SearchPipe,
     LoadingSpinnerComponent,
     CheckOutComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    UserOrderComponent
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, 
+    FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     TranslateModule.forRoot({
-      loader:{
+      loader: {
         provide: TranslateLoader,
         useFactory: (HttpLoaderFactory),
         deps: [HttpClient]
       },
-      defaultLanguage:localStorage.getItem("language")
+      defaultLanguage: localStorage.getItem("language")
 
 
 
     })
-   
+
 
   ],
   providers: [],

@@ -5,6 +5,9 @@ export interface IcompletedOrder {
     order: Iorder[],
     deliveryfee: number,
     totalprice: number,
-    resturant: string
+    resturant: string,
+    clientMobile?: number,
+    deliveryAddres?: string,
+    paymentMethod?: string
 
 }

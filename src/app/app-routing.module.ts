@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { AccountSettingsComponent } from './Components/account-settings/account-settings.component';
 import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
-import { MyOrderComponent } from './Components/my-order/my-order.component';
 import { PrivacyComponent } from './Components/privacy/privacy.component';
 import { TermsComponent } from './Components/terms/terms.component';
 import { OnlineDeliveryComponent } from './Components/online-delivery/online-delivery.component';
@@ -16,6 +15,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { AuthGuardGuard } from './Services/auth-guard.guard';
 import { CheckOutComponent } from './Components/check-out/check-out.component';
 import { ThankYouComponent } from './Components/thank-you/thank-you.component';
+import { UserOrderComponent } from './Components/user-order/user-order.component';
 
 const routes: Routes = [
   { path: 'Admin', component: AdminDashboardComponent },
@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'About-Us', component: AboutUsComponent },
   { path: 'Home', component: HomeComponent },
   { path: 'Gift-Meals', component: GiftComponent },
-  { path: 'My-Order', component: MyOrderComponent, canActivate: [AuthGuardGuard] },
+  { path: 'My-Order', component: UserOrderComponent, canActivate: [AuthGuardGuard] },
   { path: 'delivery', component: OnlineDeliveryComponent },
   { path: 'resturants/:rid', component: ResturantProfileComponent },
   { path: 'settings', component: UserProfileComponent, canActivate: [AuthGuardGuard] },
