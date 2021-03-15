@@ -9,7 +9,7 @@ import { Iresturant } from 'src/app/ViewModels/iresturant';
 })
 export class ReviewsComponent implements OnInit, OnChanges {
 
-  @Input() restID: string;
+  @Input() restID: number;
   resturant: Iresturant = { id: 0, name: '', Location: '', hotLine: 0, Branches: 0, img: "", mealImg: "" }
   repeat: number[] = [1, 2, 3, 4, 5, 6, 7]
 

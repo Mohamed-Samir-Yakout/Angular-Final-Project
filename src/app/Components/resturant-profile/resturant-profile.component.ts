@@ -24,12 +24,12 @@ export class ResturantProfileComponent implements OnInit {
       (params) => {
         let restID = params.get('rid')
         console.log(restID)
-        this.getResById(restID)
+        this.getResById(parseInt(restID))
       }
     )
   }
 
-  getResById(rid: string) {
+  getResById(rid: number) {
 
     return this.restServ.getRestById(rid).subscribe(
       (res) => {
