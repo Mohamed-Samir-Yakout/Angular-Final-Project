@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-//  arabic_Api_URL: "https://ardb-json-project.herokuapp.com",
-  english_Api_URL: "http://localhost:3000"
-  
+  //  arabic_Api_URL: "https://ardb-json-project.herokuapp.com",
+  english_Api_URL: "https://modified-db-project.herokuapp.com"
+
 };
 
 /*
